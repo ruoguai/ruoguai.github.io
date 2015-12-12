@@ -3,9 +3,9 @@
   <title><![CDATA[朱襄之]]></title>
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2015-12-11T08:25:01.763Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://zhuxiangzhi.com/"/>
+  <updated>2015-12-12T03:31:47.674Z</updated>
+  <id>http://zhuxiangzhi.com/</id>
   
   <author>
     <name><![CDATA[zhuxiangzhi]]></name>
@@ -15,9 +15,85 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Socket编程学习笔记]]></title>
+    <link href="http://zhuxiangzhi.com/2015/12/12/Socket%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://zhuxiangzhi.com/2015/12/12/Socket编程学习笔记/</id>
+    <published>2015-12-12T03:03:03.000Z</published>
+    <updated>2015-12-12T03:31:47.674Z</updated>
+    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>Socket编程是应用于网络程序的，因此必然少不了学习网络协议的相关知识，回头翻翻书，把OSI七层参考模型和TCP/IP协议画图如下简单理解一下。</the></li>
+</ul>
+<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/OSI%E4%B8%83%E5%B1%82%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.jpg" alt="OSI和TCP/IP协议"></p>
+<p>  在简单的了解回顾之后发现，这种常识性的东西，经过多次的重复记忆，是不太容易忘记了。记得有笔试或面试中问路由协议是在哪一层，当时是回答错了的，在<strong>网络层</strong>。</p>
+<p>  <strong>而socket编程主要是针对TCP和UDP协议的，这两个协议在OSI的传输层在TCP/IP四层的传输层。</strong></p>
+<p>  还有<strong>数据封装</strong>的定义：对等协议之间交换信息单元被称为协议数据单元（PDU，Protocol Data Unit），在OSI参考模型中，下层把上层的PDU作为本层的数据封装，然后加入本层的头部。<br><strong>套接字的类型</strong></p>
+<ol>
+<li>流式套接字（<code>SOCKET_STREAM</code>）<br>提供面向连接、可靠的数据传输服务，数据无差错、无重复的发送且按发送顺序接收，是基于TCP协议实现的。</li>
+<li>数据报式套接字（<code>SOCK_DGRAM</code>）<br>提供面向无连接、不可靠的传输服务，数据报以独立包形式发送，不提供无错保证，数据可能丢失和重复，并且接收顺序混乱，数据报式套接字是基于UDP协议实现的。</li>
+<li>原始套接字（<code>SOCK_RAW</code>）</li>
+</ol>
+<p>在socket编程中使用的函数主要有以下几个：</p>
+<ol>
+<li><p>WSAStartup，<strong>实现加载套接字库，进行套接字库的版本协商，确定将要使用的Socket版本</strong>。 函数原型 </p>
+<p><code>int WSAStartup(WORD wVersionRequested,LPWSADATA lpWSAData);</code></p>
+</li>
+<li><p>socket函数 <strong>新建套接字</strong> 函数原型 </p>
+</li>
+</ol>
+<pre><code>SOCKET socket(int af,int type,intprotocol)；
+</code></pre><ol>
+<li><p>bind函数 <strong>将套接字绑定到本地的地址和端口上</strong>函数原型<br><code>int bind(SOCKET s,const struct sockaddr FAR *name,int namelen);</code></p>
+</li>
+<li><p>listen函数 <strong>监听模式</strong>函数原型：<br><code>int listen(SOCKET s,int backlog);</code><br>监听模式，第二个参数是等待连接队列的最大长度。</p>
+</li>
+<li><p>accept函数，<strong>接收客户端发送的连接请求</strong></p>
+<p><code>SOCKET accept(
+SOCKET s,
+Struct sockaddr FAR* addr,
+Int FAR* addrlen);</code></p>
+</li>
+<li><p>send函数，<strong>通过一个已建立连接的套接字发送数据</strong></p>
+<p><code>SOCKET send(
+SOCKET s,、
+Const char FAR* buf,
+Int len,
+Int flags
+);</code></p>
+</li>
+<li><p>recv函数，<strong>通过一个已建立连接接收数据数据</strong></p>
+<p><code>SOCKET recv(
+SOCKET s,
+Const char FAR* buf,
+Int len,
+Int flags
+);</code></p>
+</li>
+<li><p>connect函数，<strong>将一个特定的套接字建立连接</strong></p>
+<p><code>Int connect(
+SOCKET s,
+Const struct sockaddr FAR* name,
+Int namelen,
+);</code><br>还有Recvfrom函数<br>Sendto函数<br>Htons函数和htonl函数等几个函数。</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>技能的储从点滴开始，多一点记录或许就多一点希望。</strong></p>
+<ul>
+<li>]]>
+    
+    </summary>
+    
+      <category term="编程 C/C++ Socket" scheme="http://zhuxiangzhi.com/tags/%E7%BC%96%E7%A8%8B-C-C-Socket/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[如何评价胡军版天龙八部（二）]]></title>
-    <link href="http://yoursite.com/2015/12/11/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%83%A1%E5%86%9B%E7%89%88%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://yoursite.com/2015/12/11/如何评价胡军版天龙八部（二）/</id>
+    <link href="http://zhuxiangzhi.com/2015/12/11/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%83%A1%E5%86%9B%E7%89%88%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://zhuxiangzhi.com/2015/12/11/如何评价胡军版天龙八部（二）/</id>
     <published>2015-12-11T08:02:26.000Z</published>
     <updated>2015-12-11T08:25:01.763Z</updated>
     <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br>金庸巨著《天龙八部》是本人最喜欢的一部武侠小说。作为武侠小说的集大成者可谓金老的巅峰之作。而张纪中任制片人、胡军等人主演的03版《天龙八部》也是本人最喜欢的武侠剧甚至最喜欢的电视剧。</excerpt></p>
@@ -63,14 +139,14 @@
     
     </summary>
     
-      <category term="胡军 天龙八部 刘涛 张纪中" scheme="http://yoursite.com/tags/%E8%83%A1%E5%86%9B-%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8-%E5%88%98%E6%B6%9B-%E5%BC%A0%E7%BA%AA%E4%B8%AD/"/>
+      <category term="胡军 天龙八部 刘涛 张纪中" scheme="http://zhuxiangzhi.com/tags/%E8%83%A1%E5%86%9B-%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8-%E5%88%98%E6%B6%9B-%E5%BC%A0%E7%BA%AA%E4%B8%AD/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[如何评价胡军版天龙八部（一）]]></title>
-    <link href="http://yoursite.com/2015/12/10/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%83%A1%E5%86%9B%E7%89%88%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/"/>
-    <id>http://yoursite.com/2015/12/10/如何评价胡军版天龙八部/</id>
+    <link href="http://zhuxiangzhi.com/2015/12/10/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%83%A1%E5%86%9B%E7%89%88%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/"/>
+    <id>http://zhuxiangzhi.com/2015/12/10/如何评价胡军版天龙八部/</id>
     <published>2015-12-10T11:09:59.000Z</published>
     <updated>2015-12-11T03:26:54.953Z</updated>
     <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br>金庸巨著《天龙八部》是本人最喜欢的一部武侠小说。作为武侠小说的集大成者可谓金老的巅峰之作。而张纪中任制片人、胡军等人主演的03版《天龙八部》也是本人最喜欢的武侠剧甚至最喜欢的电视剧。</excerpt></p>
@@ -125,7 +201,7 @@
     
     </summary>
     
-      <category term="胡军 天龙八部 刘涛 张纪中" scheme="http://yoursite.com/tags/%E8%83%A1%E5%86%9B-%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8-%E5%88%98%E6%B6%9B-%E5%BC%A0%E7%BA%AA%E4%B8%AD/"/>
+      <category term="胡军 天龙八部 刘涛 张纪中" scheme="http://zhuxiangzhi.com/tags/%E8%83%A1%E5%86%9B-%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8-%E5%88%98%E6%B6%9B-%E5%BC%A0%E7%BA%AA%E4%B8%AD/"/>
     
   </entry>
   
