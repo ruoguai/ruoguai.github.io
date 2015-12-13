@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2015-12-12T03:31:47.674Z</updated>
+  <updated>2015-12-13T06:37:14.762Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://zhuxiangzhi.com/2015/12/12/Socket%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://zhuxiangzhi.com/2015/12/12/Socket编程学习笔记/</id>
     <published>2015-12-12T03:03:03.000Z</published>
-    <updated>2015-12-12T03:31:47.674Z</updated>
+    <updated>2015-12-13T06:37:14.762Z</updated>
     <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
 <ul>
 <li><a id="more"></a>
@@ -78,6 +78,194 @@ Int namelen,
 );</code><br>还有Recvfrom函数<br>Sendto函数<br>Htons函数和htonl函数等几个函数。</p>
 </li>
 </ol>
+<p>下面一例程是对Socket编程用于TCP通信的实践，该例程作者：<strong>集优</strong> 例程比较翔实，诸位可以用来参考。<br>原文地址：<a href="%E9%9B%86%E4%BC%98%E7%9A%84%E4%BE%8B%E7%A8%8B">http://jingyan.baidu.com/article/676629974557c254d51b84da.html</a><br>建工程和控件的设置不再赘述，其中事件显示EDIT编辑框记得设置：<br>Multiline和Vertical Scroll为True，这样编辑框中可以显示多行，且在竖直方向上可以有滚动条。</p>
+<p>在类视图中添加一个派生于CSocket的类CSocketServer类，并使用类向导添加三个函数：<code>OnAccept();OnClose();OnReceive();</code><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E7%B1%BB%E5%90%91%E5%AF%BC%E6%B7%BB%E5%8A%A0%E5%87%BD%E6%95%B0.jpg" alt="类向导添加函数"><br>在SocketServer的头文件中包含对话框的头文件，并添加class类</p>
+<pre><code>#include &quot;Server.h&quot;
+class CServerDlg;
+</code></pre><p>添加一个指向对话框的指针，如下图所示：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E5%AF%B9%E8%AF%9D%E6%A1%86%E7%9A%84%E5%8C%85%E5%90%AB.jpg" alt="指针指向对话框"><br>对刚才类向导中添加的三个函数进行修改，实现功能</p>
+<pre><code>void CServerSocket::OnAccept(int nErrorCode)
+{
+    m_pdlg-&gt;AddClient();
+    CSocket::OnAccept(nErrorCode);
+}
+void CServerSocket::OnClose(int nErrorCode)
+{
+    m_pdlg-&gt;RemoveClient(this);
+    CSocket::OnClose(nErrorCode);
+}
+void CServerSocket::OnReceive(int nErrorCode)
+{
+    m_pdlg-&gt;RecvData(this);
+    CSocket::OnReceive(nErrorCode);
+}
+</code></pre><p>这三个m_pdlg-&gt;指向的都是在对话框中定义的函数。</p>
+<p>在对话框头文件中包含SockeSever类的头文件等<br>为对话框类添加相应的函数和变量，然后实现这些函数的功能</p>
+<pre><code>//定义函数和变量
+CServerSocket* listenSocket;//监听状态，用于打开服务器
+CPtrList m_clientList;//定义一个链表，用来存储用户
+bool m_connect;
+void AddClient();
+void RemoveClient(CServerSocket* pSocket);
+void RecvData(CServerSocket* pSocket);
+void UpdataEvent(CString str);
+BOOL Char2Byte(LPCWSTR strBuff,LPSTR destBuff,int nlen);
+void sendMSG(CString str);
+void ControlPC(CString AndroidControl);
+</code></pre><p><strong>添加客户端</strong></p>
+<pre><code> void CServerDlg::AddClient()
+{
+ CServerSocket* pSocket=new CServerSocket;
+ pSocket-&gt;m_pdlg=this;
+ listenSocket-&gt;Accept(*pSocket);
+ pSocket-&gt;AsyncSelect(FD_READ|FD_WRITE|FD_CLOSE);
+ m_clientList.AddTail(pSocket);//在链表的末端添加一个元素     或者将另外一个链表直接插入到这个链表的末尾
+ m_user=m_clientList.GetCount();//GetCount返回这个链表中元     素的个数
+ UpdateData(false);
+ UpdataEvent(_T(&quot;用户连接服务器&quot;));
+ sendMSG(_T(&quot;你好&quot;));
+ }
+</code></pre><p><strong>移除客户端</strong></p>
+<pre><code>void CServerDlg::RemoveClient(CServerSocket* pSocket)
+   {
+   POSITION nPos=m_clientList.GetHeadPosition();//返回链表标元素的位置
+   POSITION nTempPos=nPos;//中间变量
+   while (nPos)
+   {
+       CServerSocket* pSockItem=(CServerSocket*)m_clientList.GetNext(nPos);
+       if (pSockItem-&gt;m_hSocket==pSocket-&gt;m_hSocket)
+       {
+           pSockItem-&gt;Close();
+           delete pSockItem;
+           m_clientList.RemoveAt(nTempPos);
+           m_user=m_clientList.GetCount();
+           UpdateData(false);
+           UpdataEvent(_T(&quot;用户离开&quot;));
+           return;
+       }
+       nTempPos=nPos;
+   }
+   }
+</code></pre><p><strong>接收数据</strong></p>
+<pre><code>void CServerDlg::RecvData(CServerSocket* pSocket)
+{
+    //分配内存
+    char* pData=NULL;
+    pData=new char[1024];
+    memset(pData,0,sizeof(char)*1024);
+    UCHAR leng=0;
+    CString str;
+    if (pSocket-&gt;Receive(pData,1024,0)!=SOCKET_ERROR)
+    {
+        str=pData;
+        ControlPC(str);
+        sendMSG(str);
+    }
+    delete pData;
+    pData=NULL;
+}
+</code></pre><p><strong>事件日志</strong></p>
+<pre><code>void CServerDlg::UpdataEvent(CString str)
+{
+    CString string;
+    CTime time=CTime::GetCurrentTime();
+    str+=_T(&quot;\r\n&quot;);
+    string = time.Format(_T(&quot;%Y/%m/%d %H:%M:%S  &quot;)) + str;
+    int lastLine = m_event.LineIndex(m_event.GetLineCount() - 1);
+    m_event.SetSel(lastLine+1,lastLine+2,0);
+    m_event.ReplaceSel(string);
+
+}
+</code></pre><p><strong>字符串转比特数</strong></p>
+<pre><code>BOOL CServerDlg::Char2Byte(LPCWSTR strBuff,LPSTR destBuff,int nlen)
+{
+    int n = 0;
+    n = WideCharToMultiByte(CP_OEMCP, 0, strBuff, -1, destBuff, 0, 0, FALSE);//映射一unicode字符串到多字节字符串
+    if (n&lt;nlen)
+    return FALSE;
+    WideCharToMultiByte(CP_OEMCP, 0, strBuff, -1, destBuff, nlen, 0, FALSE);
+    return TRUE;
+}
+</code></pre><p><strong>发送消息</strong></p>
+<pre><code>void CServerDlg::sendMSG(CString str)
+{
+    char *pSend = new char[str.GetLength()];
+    memset(pSend, 0, str.GetLength()*sizeof(char));
+    if (!Char2Byte(str.GetBuffer(0), pSend, str.GetLength()))
+    {
+        AfxMessageBox(_T(&quot;字符转换失败&quot;));
+        delete pSend;
+        return;
+    }
+    POSITION nPos = m_clientList.GetHeadPosition();
+    while (nPos)
+    {
+        CServerSocket* pTemp = (CServerSocket*)m_clientList.GetNext(nPos);
+        pTemp-&gt;Send(pSend, str.GetLength());
+    }
+    delete pSend;
+}
+</code></pre><p><strong>控制电脑</strong></p>
+<pre><code>void CServerDlg::ControlPC(CString AndroidControl)
+{
+    if (AndroidControl == &quot;mop&quot;)
+    {
+        ShellExecute(NULL, _T(&quot;open&quot;), _T(&quot;C:\\Program Files (x86)\\KuGou\\KGMusic\\KuGou.exe&quot;), NULL, NULL, SW_SHOWNORMAL);
+    }
+    else if (AndroidControl == &quot;mcl&quot;)
+    {
+        DWORD id_num;
+        HWND hWnd = ::FindWindow(_T(&quot;kugou_ui&quot;), NULL);
+        GetWindowThreadProcessId(hWnd, &amp;id_num);          
+        //注意：第二个参数是进程的ID，返回值是线程的ID。
+        HANDLE hd = OpenProcess(PROCESS_ALL_ACCESS, FALSE, id_num);
+        TerminateProcess(hd, 0);
+    }
+    else if (AndroidControl == &quot;mpl&quot; || AndroidControl == &quot;mpa&quot;)                //播放/暂停
+    {
+        keybd_event(VK_LMENU, 0, 0, 0);
+        keybd_event(VK_F5, 0, 0, 0);
+        keybd_event(VK_F5, 0, KEYEVENTF_KEYUP, 0);
+        keybd_event(VK_LMENU, 0, KEYEVENTF_KEYUP, 0);
+    }
+}
+</code></pre><p><strong>防止按下ENTER或者ESC按键时退出</strong>   </p>
+<pre><code>BOOL CServerDlg::PreTranslateMessage(MSG* pMsg)
+{
+    switch (pMsg-&gt;wParam)
+    {
+    case VK_RETURN:
+    case VK_ESCAPE:
+        return true; break;
+    }
+    return CDialogEx::PreTranslateMessage(pMsg);
+}
+</code></pre><p><strong>事件响应</strong></p>
+<pre><code>void CServerDlg::OnBnClickedStartserver()
+{
+    if (m_connect)
+    {
+        delete listenSocket;
+        listenSocket=NULL;
+        m_connect=false;
+        SetDlgItemText(IDC_STARTSERVER,_T(&quot;打开服务器&quot;));
+        UpdataEvent(_T(&quot;系统关闭服务器&quot;));
+        return;
+    }
+    listenSocket=new CServerSocket;
+    listenSocket-&gt;m_pdlg=this;
+    //指定对话框为主对话框
+    if (!listenSocket-&gt;Create(m_port))
+    {
+        AfxMessageBox(_T(&quot;坚挺失败!&quot;));
+        listenSocket-&gt;Close();
+        return;
+    }
+    m_connect=true;
+    SetDlgItemText(IDC_STARTSERVER,_T(&quot;关闭服务器&quot;));
+    UpdataEvent(_T(&quot;系统打开服务器!&quot;));
+
+}
+</code></pre><p>至此，客户端代码的编写完成。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF.jpg" alt="服务器端"></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>技能的储从点滴开始，多一点记录或许就多一点希望。</strong></p>
