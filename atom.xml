@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2015-12-14T10:53:06.155Z</updated>
+  <updated>2015-12-14T10:57:54.247Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://zhuxiangzhi.com/2015/12/14/TwoDimArray/"/>
     <id>http://zhuxiangzhi.com/2015/12/14/TwoDimArray/</id>
     <published>2015-12-14T09:32:14.000Z</published>
-    <updated>2015-12-14T10:53:06.155Z</updated>
+    <updated>2015-12-14T10:57:54.247Z</updated>
     <content type="html"><![CDATA[<p><strong>技能的储从点滴开始，多一点记录或许就多一点希望。</strong></p>
 <ul>
 <li><a id="more"></a>
@@ -32,8 +32,47 @@
 <p><strong>二维数组的初始化</strong>，可以是连续的，也可以分行初始化：<br><code>int a[4][4]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};</code><br>不知道为什么大括号大括号非连续的，在hexo博客中不支持,暂且不写。<br>每个元素都为int类型因此在32位操作系统下各占4个字节。</p>
 <p><strong>二维数组的指针:</strong><br>int (<em>p)[4]=a; 指针</em>p指向a的一维数组:<br>比如 <em>p是a[0][0]的地址
 </em>p+2是a[0][2]的地址<br>以此类推 <em>p+i是a[0][i]的地址。<br>相应的（</em>p+1）是a[1][0]的地址<br>(<em>p+1)+i是a[1][i]的地址<br>(</em>p+j)+i是a[j][i]的地址。</p>
-<p><strong>二维数组的查找:</strong><br>仍旧以上述a[4][4]为例，查找这个数组中是否存在10这个数字，如果存在返回其下标的值，如果不存在给出提示，并判断该数组中有几10这个数字。<br>正常情况下，我们会这样做：<br>    int main()<br>    {<br>        clock_t starttime=clock();<br>        int i,j;<br>        int numFind=10;<br>        int a[4][7]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};<br>        for (i=0;i<4;i++) {="" for="" (j="0;j<4;j++)" if="" (a[i][j]="=numFind)" cout<<"待查找的值在二维数组中的第："<<i+1<<"行第"<<j+1<<"列。"<<endl;="" }="" clock_t="" endtime="clock();" cout<<static_cast<double="">(endtime-starttime)/CLOCKS_PER_SEC*1000&lt;&lt;”ms”&lt;&lt;endl;<br>        getchar();<br>    }<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找1.jpg" alt="正常查找"><br>这样可以求得待查找的下标值，程运行时间为8ms。</4;i++)></p>
-<p>但是通过观察可以得知，每一行的后一个数要大于前一个数，下一个数要大于上一个数，在《剑指offer》一书中，作者给出以下做法：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组.jpg" alt="二维数组"><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找2.jpg" alt="二维数组查找剑指"><br>在这里由于数组行和列较少，我把while循环换成一个套嵌的for循环：<br>    int main()<br>    {<br>        clock_t starttime=clock();<br>        int a[4][11]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};<br>        int i=0;<br>        int j=3;<br>        int numFind=10;<br>        for (i=0;i<4;i++) {="" for="" (j="3;j">0;j–)<br>            {<br>                if (a[i][j]==numFind)<br>                {<br>                    cout&lt;&lt;”待查找的数在：第”&lt;<i+1<<"行，第:"<<j+1<<"列"<<endl; }="" clock_t="" endtime="clock();" cout<<static_cast<double="">(endtime-starttime)/CLOCKS_PER_SEC*1000&lt;&lt;”ms”&lt;&lt;endl;<br>        getchar();<br>    }<br>这样可以求得待查找的下标值，程运行时间为6ms,比直接查找要少了2ms。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找.jpg" alt="第二次查找"></i+1<<"行，第:"<<j+1<<"列"<<endl;></4;i++)></p>
+<p><strong>二维数组的查找:</strong><br>仍旧以上述a[4][4]为例，查找这个数组中是否存在10这个数字，如果存在返回其下标的值，如果不存在给出提示，并判断该数组中有几10这个数字。<br>正常情况下，我们会这样做：<br>    <code>int main()
+    {
+        clock_t starttime=clock();
+        int i,j;
+        int numFind=10;
+        int a[4][7]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+        for (i=0;i&lt;4;i++)
+        {
+            for (j=0;j&lt;4;j++)
+            {
+                if (a[i][j]==numFind)
+                {
+                    cout&lt;&lt;&quot;待查找的值在二维数组中的第：&quot;&lt;&lt;i+1&lt;&lt;&quot;行第&quot;&lt;&lt;j+1&lt;&lt;&quot;列。&quot;&lt;&lt;endl;
+                }
+            }
+        }
+        clock_t endtime=clock();
+        cout&lt;&lt;static_cast&lt;double&gt;(endtime-starttime)/CLOCKS_PER_SEC*1000&lt;&lt;&quot;ms&quot;&lt;&lt;endl;
+        getchar();
+    }</code><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找1.jpg" alt="正常查找"><br>这样可以求得待查找的下标值，程运行时间为8ms。</p>
+<p>但是通过观察可以得知，每一行的后一个数要大于前一个数，下一个数要大于上一个数，在《剑指offer》一书中，作者给出以下做法：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组.jpg" alt="二维数组"><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找2.jpg" alt="二维数组查找剑指"><br>在这里由于数组行和列较少，我把while循环换成一个套嵌的for循环：<br>    <code>int main()
+    {
+        clock_t starttime=clock();
+        int a[4][11]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+        int i=0;
+        int j=3;
+        int numFind=10;
+        for (i=0;i&lt;4;i++)
+        {
+            for (j=3;j&gt;0;j--)
+            {
+                if (a[i][j]==numFind)
+                {
+                    cout&lt;&lt;&quot;待查找的数在：第&quot;&lt;&lt;i+1&lt;&lt;&quot;行，第:&quot;&lt;&lt;j+1&lt;&lt;&quot;列&quot;&lt;&lt;endl;
+                }
+            }
+        }
+        clock_t endtime=clock();
+        cout&lt;&lt;static_cast&lt;double&gt;(endtime-starttime)/CLOCKS_PER_SEC*1000&lt;&lt;&quot;ms&quot;&lt;&lt;endl;
+        getchar();
+    }</code><br>这样可以求得待查找的下标值，程运行时间为6ms,比直接查找要少了2ms。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找.jpg" alt="第二次查找"></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><strong>技能的储从点滴开始，多一点记录或许就多一点希望。</strong></p>
