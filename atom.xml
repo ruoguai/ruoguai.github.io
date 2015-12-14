@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2015-12-14T09:32:14.888Z</updated>
+  <updated>2015-12-14T09:34:05.972Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -19,11 +19,13 @@
     <link href="http://zhuxiangzhi.com/2015/12/14/TwoDimArray/"/>
     <id>http://zhuxiangzhi.com/2015/12/14/TwoDimArray/</id>
     <published>2015-12-14T09:32:14.000Z</published>
-    <updated>2015-12-14T09:32:14.888Z</updated>
+    <updated>2015-12-14T09:34:05.972Z</updated>
     <content type="html"></content>
     <summary type="html">
     
     </summary>
+    
+      <category term="C/C++ 二维数组 查找" scheme="http://zhuxiangzhi.com/tags/C-C-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84-%E6%9F%A5%E6%89%BE/"/>
     
   </entry>
   
