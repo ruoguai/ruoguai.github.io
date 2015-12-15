@@ -47,15 +47,12 @@
     <link href="http://zhuxiangzhi.com/2015/12/14/TwoDimArray/"/>
     <id>http://zhuxiangzhi.com/2015/12/14/TwoDimArray/</id>
     <published>2015-12-14T09:32:14.000Z</published>
-    <updated>2015-12-15T04:49:11.678Z</updated>
+    <updated>2015-12-15T04:57:58.428Z</updated>
     <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
 <ul>
 <li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-</the></li>
+<the rest="" of="" contents="" |="" 余下全文=""><br><strong>二维数组的定义</strong>，百科上讲以数组作为数组元素的数组，虽然拗口，但确实如此，以数组作为另一维度数组的元素。</the></li>
 </ul>
-<p><strong>二维数组的定义</strong>，百科上讲以数组作为数组元素的数组，虽然拗口，但确实如此，以数组作为另一维度数组的元素。</p>
 <p><strong>二维数组的下标</strong>，二维数组在两个方向上“前进”，因此有两个下标，比如：int a[4][1]代表四行四列的int类型的数组两个维度下标的范围为0-3。</p>
 <p><strong>二维数组的初始化</strong>，可以是连续的，也可以分行初始化：<br><code>int a[4][4]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};</code><br>不知道为什么大括号大括号非连续的，在hexo博客中不支持,暂且不写。<br>每个元素都为int类型因此在32位操作系统下各占4个字节。</p>
 <p><strong>二维数组的指针:</strong><br>int (<em>p)[4]=a; 指针</em>p指向a的一维数组:<br>比如 <em>p是a[0][0]的地址
