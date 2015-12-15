@@ -115,7 +115,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/C-C-二维数组-查找/" style="font-size: 10px;">C/C++ 二维数组 查找</a> <a href="/tags/编程-C-C-Socket/" style="font-size: 10px;">编程 C/C++ Socket</a> <a href="/tags/胡军-天龙八部-刘涛-张纪中/" style="font-size: 20px;">胡军 天龙八部 刘涛 张纪中</a>
+						<a href="/tags/C-C-二维数组-查找/" style="font-size: 10px;">C/C++ 二维数组 查找</a> <a href="/tags/C-C-单链表-字符串-操作/" style="font-size: 10px;">C/C++ 单链表 字符串 操作</a> <a href="/tags/编程-C-C-Socket/" style="font-size: 10px;">编程 C/C++ Socket</a> <a href="/tags/胡军-天龙八部-刘涛-张纪中/" style="font-size: 20px;">胡军 天龙八部 刘涛 张纪中</a>
 					</div>
 				</section>
 				
@@ -182,6 +182,88 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-字符串和单链表学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/15/字符串和单链表学习笔记/" class="article-date">
+  	<time datetime="2015-12-15T03:49:24.000Z" itemprop="datePublished">2015-12-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/15/字符串和单链表学习笔记/">字符串和单链表学习笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>由于字符串和单链表有许多相似之处，比如字符串的连接、插入、删除、求长度等和单链表中的操作近似，因此放在一起学习。<br><strong>字符串的定义</strong>：字符串或串(String)是由数字、字母、下划线组成的一串字符。<br><strong>单链表的定义</strong>：单链表是一种链式存取的数据结构，用一组地址任意的存储单元存放线性表中的数据元素。<br><strong>字符串的长度</strong>：在求字符串的长度时要注意sizeof和strlen的区别，如：</p>
+<pre><code>char a[100]=&quot;zhuxiangzhi&quot;  
+</code></pre><p>那么sizeof(a)=100,即char类型占1个字节，100*1=100<br>而 strlen(a)=11，且字符串的长度不包括’\0’结尾字符</p>
+<p><strong>单链表的长度</strong>：为了获取单链表的长度可以使用循环遍历的方式进行如下:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ListLen</span><span class="params">(Node *pHead)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(pHead != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        i++;         <span class="comment">//遍历链表size大小比链表的实际长度小1</span></span><br><span class="line">        pHead = pHead-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> i;    <span class="comment">//链表的实际长度</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>字符串的复制</strong>：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> a[]=<span class="string">"zhuxiangzhi"</span>;</span><br><span class="line">	<span class="keyword">char</span> b[<span class="number">12</span>];  <span class="comment">//要记得'\0'</span></span><br><span class="line">	<span class="built_in">strcpy</span>(b,a);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;b&lt;&lt;endl;</span><br><span class="line">	getchar();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strcpy</span><span class="params">(<span class="keyword">char</span>* srcstr,<span class="keyword">char</span>* deststr)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (srcstr!=<span class="literal">NULL</span>&amp;&amp;deststr!=<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">char</span> *tempstr=deststr;</span><br><span class="line">		<span class="keyword">while</span> ((*srcstr++=*deststr++)!=<span class="string">'\0'</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> tempstr;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>单链表的复制</strong>：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">struct <span class="keyword">node</span><span class="identifier"></span><br><span class="line"></span><span class="title">&#123;</span><br><span class="line">	int</span> data;</span><br><span class="line">	struct <span class="keyword">node</span><span class="identifier"> </span><span class="title">*next</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">node</span><span class="identifier"> </span><span class="title">*ListCopy</span>(<span class="keyword">node</span><span class="identifier"></span><span class="title">* L</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">node</span><span class="identifier"> </span><span class="title">*h</span>, *a;</span><br><span class="line">	if(L== NULL)</span><br><span class="line">	return NULL;</span><br><span class="line">	else if(L-&gt;<span class="variable">next=</span>=NULL)//链表只有一个头结点，无数据</span><br><span class="line">	return NULL;       </span><br><span class="line">	h = a = (<span class="keyword">node</span><span class="identifier"> </span><span class="title">*)malloc</span>(sizeof(<span class="keyword">node</span><span class="identifier"></span><span class="title">));//新链表的头结点（不保存数据）</span><br><span class="line">	a-</span>&gt;next = (<span class="keyword">node</span><span class="identifier"></span><span class="title">*)malloc</span>(sizeof(<span class="keyword">node</span><span class="identifier"></span><span class="title">));//新链表的第一个结点</span><br><span class="line">	a</span>=a-&gt;next;</span><br><span class="line">	while(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		a-&gt;<span class="variable">data=</span>L-&gt;data;</span><br><span class="line">		if(L-&gt;next != NULL)//还没有复制完</span><br><span class="line">		&#123;</span><br><span class="line">			L = L-&gt;next;</span><br><span class="line">			a-&gt;next = (<span class="keyword">node</span><span class="identifier"></span><span class="title">*)malloc</span>(sizeof(<span class="keyword">node</span><span class="identifier"></span><span class="title">));//为新链表再分配一个结点空间</span><br><span class="line">			a</span> = a-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			a-&gt;next = NULL;</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return h;//返回新链表的头指针</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C-单链表-字符串-操作/">C/C++ 单链表 字符串 操作</a></li></ul>
+	</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: true,
+        isPost: false,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: true
+        }
+        </script>
+     
+
   
     <article id="post-TwoDimArray" class="article article-type-post" itemscope itemprop="blogPost">
   
