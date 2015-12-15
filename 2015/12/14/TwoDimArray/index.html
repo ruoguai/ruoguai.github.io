@@ -15,7 +15,7 @@
 <meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组.jpg">
 <meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找2.jpg">
 <meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找.jpg">
-<meta property="og:updated_time" content="2015-12-14T13:19:17.747Z">
+<meta property="og:updated_time" content="2015-12-15T04:40:10.789Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二维数组学习笔记">
 <meta name="twitter:description" content="技能的储从点滴开始，多一点记录或许就多一点希望。">
@@ -236,47 +236,10 @@
 <p><strong>二维数组的初始化</strong>，可以是连续的，也可以分行初始化：<br><code>int a[4][4]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};</code><br>不知道为什么大括号大括号非连续的，在hexo博客中不支持,暂且不写。<br>每个元素都为int类型因此在32位操作系统下各占4个字节。</p>
 <p><strong>二维数组的指针:</strong><br>int (<em>p)[4]=a; 指针</em>p指向a的一维数组:<br>比如 <em>p是a[0][0]的地址
 </em>p+2是a[0][2]的地址<br>以此类推 <em>p+i是a[0][i]的地址。<br>相应的（</em>p+1）是a[1][0]的地址<br>(<em>p+1)+i是a[1][i]的地址<br>(</em>p+j)+i是a[j][i]的地址。</p>
-<p><strong>二维数组的查找:</strong><br>仍旧以上述a[4][4]为例，查找这个数组中是否存在10这个数字，如果存在返回其下标的值，如果不存在给出提示，并判断该数组中有几10这个数字。<br>正常情况下，我们会这样做：<br>    <code>int main()  
-    {  
-        clock_t starttime=clock();  
-        int i,j;  
-        int numFind=10;  
-        int a[4][7]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};  
-        for (i=0;i&lt;4;i++)  
-        {  
-            for (j=0;j&lt;4;j++)  
-            {  
-                if (a[i][j]==numFind)  
-                {  
-                    cout&lt;&lt;&quot;待查找的值在二维数组中的第：&quot;&lt;&lt;i+1&lt;&lt;&quot;行第&quot;&lt;&lt;j+1&lt;&lt;&quot;列。&quot;&lt;&lt;endl;  
-                }  
-            }  
-        }  
-        clock_t endtime=clock();  
-        cout&lt;&lt;static_cast&lt;double&gt;(endtime-starttime)/CLOCKS_PER_SEC*1000&lt;&lt;&quot;ms&quot;&lt;&lt;endl;  
-        getchar();  
-    }</code><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找1.jpg" alt="正常查找"><br>这样可以求得待查找的下标值，程运行时间为8ms。</p>
-<p>但是通过观察可以得知，每一行的后一个数要大于前一个数，下一个数要大于上一个数，在《剑指offer》一书中，作者给出以下做法：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组.jpg" alt="二维数组"><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找2.jpg" alt="二维数组查找剑指"><br>在这里由于数组行和列较少，我把while循环换成一个套嵌的for循环：<br>    <code>int main()  
-    {  
-        clock_t starttime=clock();  
-        int a[4][11]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};  
-        int i=0;  
-        int j=3;  
-        int numFind=10;  
-        for (i=0;i&lt;4;i++)  
-        {  
-            for (j=3;j&gt;0;j--)  
-            {  
-                if (a[i][j]==numFind)  
-                {  
-                    cout&lt;&lt;&quot;待查找的数在：第&quot;&lt;&lt;i+1&lt;&lt;&quot;行，第:&quot;&lt;&lt;j+1&lt;&lt;&quot;列&quot;&lt;&lt;endl;  
-                }  
-            }  
-        }  
-        clock_t endtime=clock();  
-        cout&lt;&lt;static_cast&lt;double&gt;(endtime-starttime)/CLOCKS_PER_SEC*1000&lt;&lt;&quot;ms&quot;&lt;&lt;endl;  
-        getchar();  
-    }</code><br>这样可以求得待查找的下标值，程运行时间为6ms,比直接查找要少了2ms。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找.jpg" alt="第二次查找"></p>
+<p><strong>二维数组的查找:</strong><br>仍旧以上述a[4][4]为例，查找这个数组中是否存在10这个数字，如果存在返回其下标的值，如果不存在给出提示，并判断该数组中有几10这个数字。<br>正常情况下，我们会这样做：<br>    <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">	<span class="keyword">clock_t</span> starttime=clock();  </span><br><span class="line">	<span class="keyword">int</span> i,j;  </span><br><span class="line">	<span class="keyword">int</span> numFind=<span class="number">10</span>;  </span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">4</span>][<span class="number">7</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>&#125;;  </span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)  </span><br><span class="line">	&#123;  </span><br><span class="line">		<span class="keyword">for</span> (j=<span class="number">0</span>;j&lt;<span class="number">4</span>;j++)  </span><br><span class="line">		&#123;  </span><br><span class="line">			<span class="keyword">if</span> (a[i][j]==numFind)  </span><br><span class="line">			&#123;  </span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"待查找的值在二维数组中的第："</span>&lt;&lt;i+<span class="number">1</span>&lt;&lt;<span class="string">"行第"</span>&lt;&lt;j+<span class="number">1</span>&lt;&lt;<span class="string">"列。"</span>&lt;&lt;endl;  </span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">clock_t</span> endtime=clock();  </span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="keyword">static_cast</span>&lt;<span class="keyword">double</span>&gt;(endtime-starttime)/CLOCKS_PER_SEC*<span class="number">1000</span>&lt;&lt;<span class="string">"ms"</span>&lt;&lt;endl;  </span><br><span class="line">	getchar();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找1.jpg" alt="正常查找"><br>这样可以求得待查找的下标值，程运行时间为8ms。</p>
+<p>但是通过观察可以得知，每一行的后一个数要大于前一个数，下一个数要大于上一个数，在《剑指offer》一书中，作者给出以下做法：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组.jpg" alt="二维数组"><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找2.jpg" alt="二维数组查找剑指"><br>在这里由于数组行和列较少，我把while循环换成一个套嵌的for循环：<br>    <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">	<span class="keyword">clock_t</span> starttime=clock();  </span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">4</span>][<span class="number">11</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>&#125;;  </span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;  </span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">3</span>;  </span><br><span class="line">	<span class="keyword">int</span> numFind=<span class="number">10</span>;  </span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)  </span><br><span class="line">	&#123;  </span><br><span class="line">		<span class="keyword">for</span> (j=<span class="number">3</span>;j&gt;<span class="number">0</span>;j--)  </span><br><span class="line">		&#123;  </span><br><span class="line">			<span class="keyword">if</span> (a[i][j]==numFind)  </span><br><span class="line">			&#123;  </span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"待查找的数在：第"</span>&lt;&lt;i+<span class="number">1</span>&lt;&lt;<span class="string">"行，第:"</span>&lt;&lt;j+<span class="number">1</span>&lt;&lt;<span class="string">"列"</span>&lt;&lt;endl;  </span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">clock_t</span> endtime=clock();  </span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="keyword">static_cast</span>&lt;<span class="keyword">double</span>&gt;(endtime-starttime)/CLOCKS_PER_SEC*<span class="number">1000</span>&lt;&lt;<span class="string">"ms"</span>&lt;&lt;endl;  </span><br><span class="line">	getchar();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样可以求得待查找的下标值，程运行时间为6ms,比直接查找要少了2ms。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找.jpg" alt="第二次查找"></p>
 
       
     </div>
@@ -288,7 +251,7 @@
   <p><span>本文标题:</span><a href="/2015/12/14/TwoDimArray/">二维数组学习笔记</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zhuxiangzhi 的个人博客">zhuxiangzhi</a></p>
   <p><span>发布时间:</span>2015年12月14日 - 17时32分</p>
-  <p><span>最后更新:</span>2015年12月14日 - 21时19分</p>
+  <p><span>最后更新:</span>2015年12月15日 - 12时40分</p>
   <p>
     <span>原始链接:</span><a class="post-url" href="/2015/12/14/TwoDimArray/" title="二维数组学习笔记">http://zhuxiangzhi.com/2015/12/14/TwoDimArray/</a>
     <span class="copy-path" data-clipboard-text="原文: http://zhuxiangzhi.com/2015/12/14/TwoDimArray/　　作者: zhuxiangzhi" title="点击复制文章链接">
