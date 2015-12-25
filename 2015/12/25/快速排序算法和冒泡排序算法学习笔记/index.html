@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>快速排序算法和冒泡排序算法学习笔记 | 朱襄之</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="写论文的过程中对采集到的数据进行分析时，由于数据是杂乱无章的，使用排序的方式看起来清晰方便一些，因此在这里使用快速排序算法和冒泡排序算法对数据进行处理。为了简化过程，在本文中使用一个随机生成的数组来代替采集得到的数据。快速排序的时间复杂度：平均O(nlog2n)，最好O(nlog2n)，最坏情况O(n^2)冒泡排序的时间复杂度：平均O(n^2)，最好O(n)，最坏情况O(n^2)
+实现的代码如下：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快速排序算法和冒泡排序算法学习笔记">
+<meta property="og:url" content="http://zhuxiangzhi.com/2015/12/25/快速排序算法和冒泡排序算法学习笔记/index.html">
+<meta property="og:site_name" content="朱襄之">
+<meta property="og:description" content="写论文的过程中对采集到的数据进行分析时，由于数据是杂乱无章的，使用排序的方式看起来清晰方便一些，因此在这里使用快速排序算法和冒泡排序算法对数据进行处理。为了简化过程，在本文中使用一个随机生成的数组来代替采集得到的数据。快速排序的时间复杂度：平均O(nlog2n)，最好O(nlog2n)，最坏情况O(n^2)冒泡排序的时间复杂度：平均O(n^2)，最好O(n)，最坏情况O(n^2)
+实现的代码如下：">
+<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%8E%92%E5%BA%8F%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%92%8C%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.jpg">
+<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%8E%92%E5%BA%8F%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F1.jpg">
+<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%8E%92%E5%BA%8F%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F1.jpg">
+<meta property="og:updated_time" content="2015-12-25T10:34:00.487Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="快速排序算法和冒泡排序算法学习笔记">
+<meta name="twitter:description" content="写论文的过程中对采集到的数据进行分析时，由于数据是杂乱无章的，使用排序的方式看起来清晰方便一些，因此在这里使用快速排序算法和冒泡排序算法对数据进行处理。为了简化过程，在本文中使用一个随机生成的数组来代替采集得到的数据。快速排序的时间复杂度：平均O(nlog2n)，最好O(nlog2n)，最坏情况O(n^2)冒泡排序的时间复杂度：平均O(n^2)，最好O(n)，最坏情况O(n^2)
+实现的代码如下：">
+  
+    <link rel="alternative" href="/atom.xml" title="朱襄之" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+<script type="text/javascript">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?0a0db6e30ac6bf62f3d95736f1a42a3f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">zhuxiangzhi</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">随笔</p>
+		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
+				
+
+
+		
+			<div id="switch-btn" class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/">标签云</a></li>
+				        
+							<li><a href="/about/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/138385115" title="新浪微博"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/zhu-xiang-zhi" title="知乎"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/262345307" title="QQ"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C-C-二维数组-查找/" style="font-size: 10px;">C/C++ 二维数组 查找</a> <a href="/tags/C-C-单链表-字符串-操作/" style="font-size: 10px;">C/C++ 单链表 字符串 操作</a> <a href="/tags/C-C-快速排序-冒泡排序/" style="font-size: 10px;">C/C++ 快速排序 冒泡排序</a> <a href="/tags/冬至/" style="font-size: 10px;">冬至</a> <a href="/tags/编程-C-C-Socket/" style="font-size: 10px;">编程 C/C++ Socket</a> <a href="/tags/胡军-天龙八部-刘涛-张纪中/" style="font-size: 20px;">胡军 天龙八部 刘涛 张纪中</a> <a href="/tags/金庸-武侠-魏晋风度/" style="font-size: 10px;">金庸 武侠 魏晋风度</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">记录点滴</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">zhuxiangzhi</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/avatar.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">zhuxiangzhi</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">随笔</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/">标签云</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/138385115" title="新浪微博"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/zhu-xiang-zhi" title="知乎"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/262345307" title="QQ"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-快速排序算法和冒泡排序算法学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/25/快速排序算法和冒泡排序算法学习笔记/" class="article-date">
+  	<time datetime="2015-12-25T10:33:12.000Z" itemprop="datePublished">2015-12-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      快速排序算法和冒泡排序算法学习笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C-快速排序-冒泡排序/">C/C++ 快速排序 冒泡排序</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>写论文的过程中对采集到的数据进行分析时，由于数据是杂乱无章的，使用排序的方式看起来清晰方便一些，因此在这里使用快速排序算法和冒泡排序算法对数据进行处理。为了简化过程，在本文中使用一个随机生成的数组来代替采集得到的数据。<br>快速排序的时间复杂度：平均O(nlog2n)，最好O(nlog2n)，最坏情况O(n^2)<br>冒泡排序的时间复杂度：平均O(n^2)，最好O(n)，最坏情况O(n^2)</p>
+<p>实现的代码如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> N <span class="number">10</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span> s[],<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> b[], <span class="keyword">int</span> count)</span></span>; </span><br><span class="line"><span class="comment">//主函数入口</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[N];</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"生成的随机数组为："</span>&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i]=rand()%<span class="number">101</span>;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"a["</span>&lt;&lt;i&lt;&lt;<span class="string">"]="</span>&lt;&lt;a[i]&lt;&lt;<span class="string">";"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"使用快速排序排序后的数组为："</span>&lt;&lt;endl;</span><br><span class="line">	quickSort(a,<span class="number">0</span>,N-<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;N;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"a["</span>&lt;&lt;j&lt;&lt;<span class="string">"]="</span>&lt;&lt;a[j]&lt;&lt;<span class="string">";"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	BubbleSort(a,N);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"使用冒泡排序排序后的数组为："</span>&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;N;k++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"a["</span>&lt;&lt;k&lt;&lt;<span class="string">"]="</span>&lt;&lt;a[k]&lt;&lt;<span class="string">";"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"www.zhuxiangzhi.com"</span>&lt;&lt;endl;</span><br><span class="line">	getchar();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//快速排序的实现</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span> s[], <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">	<span class="keyword">if</span> (l&lt; r)  </span><br><span class="line">	&#123;        </span><br><span class="line">		<span class="keyword">int</span> i = l, j = r, x = s[l];  </span><br><span class="line">		<span class="keyword">while</span> (i &lt; j)  </span><br><span class="line">		&#123;  </span><br><span class="line">			<span class="keyword">while</span>(i &lt; j &amp;&amp; s[j]&gt;= x) <span class="comment">// 从右向左找第一个小于x的数  </span></span><br><span class="line">				j--;   </span><br><span class="line">			<span class="keyword">if</span>(i &lt; j)  </span><br><span class="line">				s[i++] = s[j];  </span><br><span class="line">			<span class="keyword">while</span>(i &lt; j &amp;&amp; s[i]&lt; x) <span class="comment">// 从左向右找第一个大于等于x的数  </span></span><br><span class="line">				i++;   </span><br><span class="line">			<span class="keyword">if</span>(i &lt; j)  </span><br><span class="line">				s[j--] = s[i];  </span><br><span class="line">		&#125;  </span><br><span class="line">		s[i] = x;  </span><br><span class="line">		quickSort(s, l, i - <span class="number">1</span>); <span class="comment">// 递归调用  </span></span><br><span class="line">		quickSort(s, i + <span class="number">1</span>, r);  </span><br><span class="line">	&#125;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> b[], <span class="keyword">int</span> count)</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> temp;  </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; count; i++)  </span><br><span class="line">	&#123;  </span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = count - <span class="number">1</span>; j &gt;= i; j--)  </span><br><span class="line">		&#123;  </span><br><span class="line">			<span class="keyword">if</span> (b[j]&lt; b[j - <span class="number">1</span>])  </span><br><span class="line">			&#123;  </span><br><span class="line">				temp = b[j - <span class="number">1</span>];  </span><br><span class="line">				b[j - <span class="number">1</span>] = b[j];  </span><br><span class="line">				b[j] = temp;  </span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;   </span><br><span class="line">	&#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果如下：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%8E%92%E5%BA%8F%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%92%8C%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.jpg" alt=""><br>冒泡排序算法易理解，下面是关于快速排序的实现过程：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%8E%92%E5%BA%8F%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F1.jpg" alt=""><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%8E%92%E5%BA%8F%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F1.jpg" alt=""></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2015/12/25/快速排序算法和冒泡排序算法学习笔记/">快速排序算法和冒泡排序算法学习笔记</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 zhuxiangzhi 的个人博客">zhuxiangzhi</a></p>
+  <p><span>发布时间:</span>2015年12月25日 - 18时33分</p>
+  <p><span>最后更新:</span>2015年12月25日 - 18时34分</p>
+  <p>
+    <span>原始链接:</span><a class="post-url" href="/2015/12/25/快速排序算法和冒泡排序算法学习笔记/" title="快速排序算法和冒泡排序算法学习笔记">http://zhuxiangzhi.com/2015/12/25/快速排序算法和冒泡排序算法学习笔记/</a>
+    <span class="copy-path" data-clipboard-text="原文: http://zhuxiangzhi.com/2015/12/25/快速排序算法和冒泡排序算法学习笔记/　　作者: zhuxiangzhi" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.copy-path'); </script>
+</div>
+
+
+
+
+<nav id="article-nav">
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2015/12/23/如何评价胡军版天龙八部（五）/">
+        如何评价胡军版天龙八部（五）
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+  <div class="duoshuo" id="comments">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/12/25/快速排序算法和冒泡排序算法学习笔记/" data-title="快速排序算法和冒泡排序算法学习笔记" data-url="http://zhuxiangzhi.com/2015/12/25/快速排序算法和冒泡排序算法学习笔记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"zhuxiangzhi"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    <div  class="post-nav-button">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2015/12/23/如何评价胡军版天龙八部（五）/" title="下一篇: 如何评价胡军版天龙八部（五）">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+    
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: true
+        }
+        </script>
+     
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2015 zhuxiangzhi
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+<script>
+  var backgroundnum = 5;
+  var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+
+  $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+</script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
