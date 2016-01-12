@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2016-01-07T06:39:44.428Z</updated>
+  <updated>2016-01-12T01:20:17.203Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[如何查询本机的ip和User-Agent]]></title>
+    <link href="http://zhuxiangzhi.com/2016/01/12/%E5%A6%82%E4%BD%95%E6%9F%A5%E8%AF%A2%E6%9C%AC%E6%9C%BA%E7%9A%84ip%E5%92%8CUser-Agent/"/>
+    <id>http://zhuxiangzhi.com/2016/01/12/如何查询本机的ip和User-Agent/</id>
+    <published>2016-01-12T01:17:43.000Z</published>
+    <updated>2016-01-12T01:20:17.203Z</updated>
+    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>查询本机IP和User-Agent</strong></excerpt></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>打开该链接即可：<br><a href="http://whatsmyuseragent.com/" title="查询" target="_blank" rel="external">http://whatsmyuseragent.com/</a></the></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>查询本机IP和User-Agent</strong></p>
+<ul>
+<li>]]>
+    
+    </summary>
+    
+      <category term="ip User-Agent" scheme="http://zhuxiangzhi.com/tags/ip-User-Agent/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[在O（1）时间复杂度内删除链表中的一个结点]]></title>
