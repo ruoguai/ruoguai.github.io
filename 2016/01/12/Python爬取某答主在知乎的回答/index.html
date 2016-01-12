@@ -3,22 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>二维数组学习笔记 | 朱襄之</title>
+  <title>Python爬取某答主在知乎的回答 | 朱襄之</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
+  <meta name="description" content="断断续续的在知乎上回答了四五十个问题，写个小程序爬取自己在知乎上的回答">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二维数组学习笔记">
-<meta property="og:url" content="http://zhuxiangzhi.com/2015/12/14/TwoDimArray/index.html">
+<meta property="og:title" content="Python爬取某答主在知乎的回答">
+<meta property="og:url" content="http://zhuxiangzhi.com/2016/01/12/Python爬取某答主在知乎的回答/index.html">
 <meta property="og:site_name" content="朱襄之">
-<meta property="og:description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
-<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找1.jpg">
-<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组.jpg">
-<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找2.jpg">
-<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找.jpg">
-<meta property="og:updated_time" content="2015-12-30T09:20:33.944Z">
+<meta property="og:description" content="断断续续的在知乎上回答了四五十个问题，写个小程序爬取自己在知乎上的回答">
+<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E6%A0%87%E7%AD%BE.jpg">
+<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E7%AD%94%E6%A1%88%E9%93%BE%E6%8E%A5%E5%92%8C%E9%97%AE%E9%A2%98%E5%90%8D.jpg">
+<meta property="og:updated_time" content="2016-01-12T06:16:30.831Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二维数组学习笔记">
-<meta name="twitter:description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
+<meta name="twitter:title" content="Python爬取某答主在知乎的回答">
+<meta name="twitter:description" content="断断续续的在知乎上回答了四五十个问题，写个小程序爬取自己在知乎上的回答">
   
     <link rel="alternative" href="/atom.xml" title="朱襄之" type="application/atom+xml">
   
@@ -198,11 +196,11 @@ var _hmt = _hmt || [];
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-TwoDimArray" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Python爬取某答主在知乎的回答" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/14/TwoDimArray/" class="article-date">
-  	<time datetime="2015-12-14T09:32:14.000Z" itemprop="datePublished">2015-12-14</time>
+      <a href="/2016/01/12/Python爬取某答主在知乎的回答/" class="article-date">
+  	<time datetime="2016-01-12T02:40:32.000Z" itemprop="datePublished">2016-01-12</time>
 </a>
     </div>
   
@@ -215,7 +213,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      二维数组学习笔记
+      Python爬取某答主在知乎的回答
     </h1>
   
 
@@ -226,7 +224,7 @@ var _hmt = _hmt || [];
 
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C-二维数组-查找/">C/C++ 二维数组 查找</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python-BeautifulSoup-知乎/">Python BeautifulSoup 知乎</a></li></ul>
 	</div>
 
         <div class="clearfix"></div>
@@ -236,19 +234,13 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><strong>断断续续的在知乎上回答了四五十个问题，写个小程序爬取自己在知乎上的回答</strong></excerpt></p>
 <ul>
 <li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><br><strong>二维数组的定义</strong>，百科上讲以数组作为数组元素的数组，虽然拗口，但确实如此，以数组作为另一维度数组的元素。</the></li>
+<the rest="" of="" contents="" |="" 余下全文=""><br>由于实时爬取某人的回答需要进行登录操作，因此，从最简单的开始，慢慢的学习，先把我回答的问题，以html的形式存储起来，然后再使用BeautifulSoup读取进行标签划分，通过简单的标签选择便可以获取我回答过的问题，以及答案对应的链接了，具体的实现代码如下：<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import urllib, urllib2, cookielib, re, <span class="tag">time</span>, os</span><br><span class="line">import requests</span><br><span class="line">from BeautifulSoup import BeautifulSoup</span><br><span class="line">MySoup=<span class="function"><span class="title">BeautifulSoup</span><span class="params">(open(<span class="string">'1.html'</span>)</span></span>) <span class="comment">//打开本地网页</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用findall函数来获取问题的名称</span></span><br><span class="line"><span class="comment">//可以看到问题都具有标签&lt;h2&gt;的属性，因此寻找所有h2标签</span></span><br><span class="line"><span class="comment">//在h2标签内还有一个&lt;a&gt;标签，因此打印出a标签的string</span></span><br><span class="line"><span class="keyword">for</span> link <span class="keyword">in</span> MySoup.<span class="function"><span class="title">findAll</span><span class="params">(<span class="string">'h2'</span>)</span></span>:</span><br><span class="line">    <span class="function"><span class="title">print</span><span class="params">(link.a[<span class="string">'href'</span>])</span></span> #获取我的回答的连接</span><br><span class="line">    <span class="function"><span class="title">print</span><span class="params">(link.a.string)</span></span> #获取我回答的问题名</span><br></pre></td></tr></table></figure>
+</the></li>
 </ul>
-<p><strong>二维数组的下标</strong>，二维数组在两个方向上“前进”，因此有两个下标，比如：int a[4][1]代表四行四列的int类型的数组两个维度下标的范围为0-3。</p>
-<p><strong>二维数组的初始化</strong>，可以是连续的，也可以分行初始化：<br><code>int a[4][4]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};</code><br>不知道为什么大括号大括号非连续的，在hexo博客中不支持,暂且不写。<br>每个元素都为int类型因此在32位操作系统下各占4个字节。</p>
-<p><strong>二维数组的指针:</strong><br>int (<em>p)[4]=a; 指针</em>p指向a的一维数组:<br>比如 <em>p是a[0][0]的地址
-</em>p+2是a[0][2]的地址<br>以此类推 <em>p+i是a[0][i]的地址。<br>相应的（</em>p+1）是a[1][0]的地址<br>(<em>p+1)+i是a[1][i]的地址<br>(</em>p+j)+i是a[j][i]的地址。</p>
-<p><strong>二维数组的查找:</strong><br>仍旧以上述a[4][4]为例，查找这个数组中是否存在10这个数字，如果存在返回其下标的值，如果不存在给出提示，并判断该数组中有几10这个数字。<br>正常情况下，我们会这样做：<br>    <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">	<span class="keyword">clock_t</span> starttime=clock();  </span><br><span class="line">	<span class="keyword">int</span> i,j;  </span><br><span class="line">	<span class="keyword">int</span> numFind=<span class="number">10</span>;  </span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">4</span>][<span class="number">7</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>&#125;;  </span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)  </span><br><span class="line">	&#123;  </span><br><span class="line">		<span class="keyword">for</span> (j=<span class="number">0</span>;j&lt;<span class="number">4</span>;j++)  </span><br><span class="line">		&#123;  </span><br><span class="line">			<span class="keyword">if</span> (a[i][j]==numFind)  </span><br><span class="line">			&#123;  </span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"待查找的值在二维数组中的第："</span>&lt;&lt;i+<span class="number">1</span>&lt;&lt;<span class="string">"行第"</span>&lt;&lt;j+<span class="number">1</span>&lt;&lt;<span class="string">"列。"</span>&lt;&lt;endl;  </span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">clock_t</span> endtime=clock();  </span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="keyword">static_cast</span>&lt;<span class="keyword">double</span>&gt;(endtime-starttime)/CLOCKS_PER_SEC*<span class="number">1000</span>&lt;&lt;<span class="string">"ms"</span>&lt;&lt;endl;  </span><br><span class="line">	getchar();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找1.jpg" alt="正常查找"><br>这样可以求得待查找的下标值，程运行时间为8ms。</p>
-<p>但是通过观察可以得知，每一行的后一个数要大于前一个数，下一个数要大于上一个数，在《剑指offer》一书中，作者给出以下做法：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组.jpg" alt="二维数组"><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找2.jpg" alt="二维数组查找剑指"><br>在这里由于数组行和列较少，我把while循环换成一个套嵌的for循环：<br>    <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">	<span class="keyword">clock_t</span> starttime=clock();  </span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">4</span>][<span class="number">11</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>&#125;;  </span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;  </span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">3</span>;  </span><br><span class="line">	<span class="keyword">int</span> numFind=<span class="number">10</span>;  </span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)  </span><br><span class="line">	&#123;  </span><br><span class="line">		<span class="keyword">for</span> (j=<span class="number">3</span>;j&gt;<span class="number">0</span>;j--)  </span><br><span class="line">		&#123;  </span><br><span class="line">			<span class="keyword">if</span> (a[i][j]==numFind)  </span><br><span class="line">			&#123;  </span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"待查找的数在：第"</span>&lt;&lt;i+<span class="number">1</span>&lt;&lt;<span class="string">"行，第:"</span>&lt;&lt;j+<span class="number">1</span>&lt;&lt;<span class="string">"列"</span>&lt;&lt;endl;  </span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">clock_t</span> endtime=clock();  </span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="keyword">static_cast</span>&lt;<span class="keyword">double</span>&gt;(endtime-starttime)/CLOCKS_PER_SEC*<span class="number">1000</span>&lt;&lt;<span class="string">"ms"</span>&lt;&lt;endl;  </span><br><span class="line">	getchar();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这样可以求得待查找的下标值，程运行时间为6ms,比直接查找要少了2ms。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找.jpg" alt="第二次查找"></p>
+<p>抓取的结果如下：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E6%A0%87%E7%AD%BE.jpg" alt=""><br>可以看到每个问题都是包含在h2标签内的a子标签里的。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E7%AD%94%E6%A1%88%E9%93%BE%E6%8E%A5%E5%92%8C%E9%97%AE%E9%A2%98%E5%90%8D.jpg" alt=""><br>暂时先实现这个功能，更多的功能比如模拟登陆知乎，下载知乎图片会在接下来的时间内进一步学习和完善。</p>
 
       
     </div>
@@ -257,13 +249,13 @@ var _hmt = _hmt || [];
   
     
 <div class="copyright">
-  <p><span>本文标题:</span><a href="/2015/12/14/TwoDimArray/">二维数组学习笔记</a></p>
+  <p><span>本文标题:</span><a href="/2016/01/12/Python爬取某答主在知乎的回答/">Python爬取某答主在知乎的回答</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zhuxiangzhi 的个人博客">zhuxiangzhi</a></p>
-  <p><span>发布时间:</span>2015年12月14日 - 17时32分</p>
-  <p><span>最后更新:</span>2015年12月30日 - 17时20分</p>
+  <p><span>发布时间:</span>2016年01月12日 - 10时40分</p>
+  <p><span>最后更新:</span>2016年01月12日 - 14时16分</p>
   <p>
-    <span>原始链接:</span><a class="post-url" href="/2015/12/14/TwoDimArray/" title="二维数组学习笔记">http://zhuxiangzhi.com/2015/12/14/TwoDimArray/</a>
-    <span class="copy-path" data-clipboard-text="原文: http://zhuxiangzhi.com/2015/12/14/TwoDimArray/　　作者: zhuxiangzhi" title="点击复制文章链接">
+    <span>原始链接:</span><a class="post-url" href="/2016/01/12/Python爬取某答主在知乎的回答/" title="Python爬取某答主在知乎的回答">http://zhuxiangzhi.com/2016/01/12/Python爬取某答主在知乎的回答/</a>
+    <span class="copy-path" data-clipboard-text="原文: http://zhuxiangzhi.com/2016/01/12/Python爬取某答主在知乎的回答/　　作者: zhuxiangzhi" title="点击复制文章链接">
         <i class="fa fa-clipboard"></i>
     </span>
   </p>
@@ -277,16 +269,10 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <div id="article-nav-newer" class="article-nav-title">
-      <a href="/2015/12/15/字符串和单链表学习笔记/">
-        字符串和单链表学习笔记
-      </a>
-    </div>
-  
   
     <div id="article-nav-older" class="article-nav-title">
-      <a href="/2015/12/12/Socket编程学习笔记/">
-        Socket编程学习笔记
+      <a href="/2016/01/12/如何查询本机的ip和User-Agent/">
+        如何查询本机的ip和User-Agent
       </a>
     </div>
   
@@ -352,7 +338,7 @@ var _hmt = _hmt || [];
 
   <div class="duoshuo" id="comments">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015/12/14/TwoDimArray/" data-title="二维数组学习笔记" data-url="http://zhuxiangzhi.com/2015/12/14/TwoDimArray/"></div>
+	<div class="ds-thread" data-thread-key="2016/01/12/Python爬取某答主在知乎的回答/" data-title="Python爬取某答主在知乎的回答" data-url="http://zhuxiangzhi.com/2016/01/12/Python爬取某答主在知乎的回答/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -388,16 +374,14 @@ var _hmt = _hmt || [];
 
   
   
-    
     <div  class="post-nav-button">
-    <a href="/2015/12/15/字符串和单链表学习笔记/" title="上一篇: 字符串和单链表学习笔记">
-    <i class="fa fa-angle-left"></i>
-    </a>
-    <a href="/2015/12/12/Socket编程学习笔记/" title="下一篇: Socket编程学习笔记">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/01/12/如何查询本机的ip和User-Agent/" title="下一篇: 如何查询本机的ip和User-Agent">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>
   
+    
 
 
 

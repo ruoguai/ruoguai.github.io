@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2016-01-12T01:20:17.203Z</updated>
+  <updated>2016-01-12T06:16:30.831Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -13,6 +13,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Python爬取某答主在知乎的回答]]></title>
+    <link href="http://zhuxiangzhi.com/2016/01/12/Python%E7%88%AC%E5%8F%96%E6%9F%90%E7%AD%94%E4%B8%BB%E5%9C%A8%E7%9F%A5%E4%B9%8E%E7%9A%84%E5%9B%9E%E7%AD%94/"/>
+    <id>http://zhuxiangzhi.com/2016/01/12/Python爬取某答主在知乎的回答/</id>
+    <published>2016-01-12T02:40:32.000Z</published>
+    <updated>2016-01-12T06:16:30.831Z</updated>
+    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>断断续续的在知乎上回答了四五十个问题，写个小程序爬取自己在知乎上的回答</strong></excerpt></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>由于实时爬取某人的回答需要进行登录操作，因此，从最简单的开始，慢慢的学习，先把我回答的问题，以html的形式存储起来，然后再使用BeautifulSoup读取进行标签划分，通过简单的标签选择便可以获取我回答过的问题，以及答案对应的链接了，具体的实现代码如下：<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import urllib, urllib2, cookielib, re, <span class="tag">time</span>, os</span><br><span class="line">import requests</span><br><span class="line">from BeautifulSoup import BeautifulSoup</span><br><span class="line">MySoup=<span class="function"><span class="title">BeautifulSoup</span><span class="params">(open(<span class="string">'1.html'</span>)</span></span>) <span class="comment">//打开本地网页</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用findall函数来获取问题的名称</span></span><br><span class="line"><span class="comment">//可以看到问题都具有标签&lt;h2&gt;的属性，因此寻找所有h2标签</span></span><br><span class="line"><span class="comment">//在h2标签内还有一个&lt;a&gt;标签，因此打印出a标签的string</span></span><br><span class="line"><span class="keyword">for</span> link <span class="keyword">in</span> MySoup.<span class="function"><span class="title">findAll</span><span class="params">(<span class="string">'h2'</span>)</span></span>:</span><br><span class="line">    <span class="function"><span class="title">print</span><span class="params">(link.a[<span class="string">'href'</span>])</span></span> #获取我的回答的连接</span><br><span class="line">    <span class="function"><span class="title">print</span><span class="params">(link.a.string)</span></span> #获取我回答的问题名</span><br></pre></td></tr></table></figure>
+</the></li>
+</ul>
+<p>抓取的结果如下：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E6%A0%87%E7%AD%BE.jpg" alt=""><br>可以看到每个问题都是包含在h2标签内的a子标签里的。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E7%AD%94%E6%A1%88%E9%93%BE%E6%8E%A5%E5%92%8C%E9%97%AE%E9%A2%98%E5%90%8D.jpg" alt=""><br>暂时先实现这个功能，更多的功能比如模拟登陆知乎，下载知乎图片会在接下来的时间内进一步学习和完善。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>断断续续的在知乎上回答了四五十个问题，写个小程序爬取自己在知乎上的回答</strong></p>
+<ul>
+<li>]]>
+    
+    </summary>
+    
+      <category term="Python BeautifulSoup 知乎" scheme="http://zhuxiangzhi.com/tags/Python-BeautifulSoup-%E7%9F%A5%E4%B9%8E/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[如何查询本机的ip和User-Agent]]></title>
