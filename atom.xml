@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2016-01-18T02:27:30.782Z</updated>
+  <updated>2016-01-18T09:27:18.787Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -13,6 +13,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Python实现直方图均衡化]]></title>
+    <link href="http://zhuxiangzhi.com/2016/01/18/Python%E5%AE%9E%E7%8E%B0%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96/"/>
+    <id>http://zhuxiangzhi.com/2016/01/18/Python实现直方图均衡化/</id>
+    <published>2016-01-18T09:26:23.000Z</published>
+    <updated>2016-01-18T09:27:18.787Z</updated>
+    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>直方图操作有助于图像的增强。<br>直方图均衡化就是把直方图中“密集”的地方向“稀疏”的地方平均一下。想象一下，有堆沙子，使劲压，压到“近乎”平整为止。</the></li>
+</ul>
+<p><strong>直方图计算函数histogram</strong><br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def histogram(a, bins=<span class="number">10</span>, <span class="built_in">range</span>=<span class="type">None</span>, normed=False, weights=<span class="type">None</span>, density=<span class="type">None</span>)</span><br></pre></td></tr></table></figure></p>
+<p>a:输入，input，一般是矩阵类型的图像<br>bins:int类型的整数或者有序列的标量，如果是个int类型的（默认是10），是直方图中使用小区间的数目，如果是有序列的标量是一个标注了左右区间的。<br>range:bins的区间，默认缺省<br>normed:若为true，返回结果是可能的密度函数的值，若为false结果是在每一个区间内的样本数量<br>weights和density。</p>
+<p><strong>histogram的返回值：一个矩阵图像hist和一个单精度变量bin_edges表示区间的边缘</strong></p>
+<p>完成直方图均衡化的代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">im=array(Image.open(<span class="string">'121.jpg'</span>).convert(<span class="string">'L'</span>))</span><br><span class="line">gray()</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">histequ</span><span class="params">(im,nbr_bins=<span class="number">256</span>)</span>:</span></span><br><span class="line">    imhist,bins=histogram(im.flatten(),nbr_bins,normed=<span class="keyword">True</span>)</span><br><span class="line">    cdf=imhist.cumsum() <span class="comment">#累积分布函数，沿着指定的轴或者曲线</span></span><br><span class="line">    cdf=<span class="number">255</span>*cdf/cdf[-<span class="number">1</span>]</span><br><span class="line">    im2=interp(im.flatten(),bins[:-<span class="number">1</span>],cdf) <span class="comment">#使用累积分布函数的线性差值，计算新的像素值</span></span><br><span class="line">    <span class="keyword">return</span> im2.reshape(im.shape),cdf</span><br><span class="line">im2,cdf=histequ(im)</span><br><span class="line">figure()</span><br><span class="line">imshow(im2)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure></p>
+<p>测试图：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/Pysrc.jpg" alt=""><br>直方图均衡化后的图：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/Pydst_hist_equ.png" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
+<ul>
+<li>]]>
+    
+    </summary>
+    
+      <category term="Python 图像处理 直方图均衡化" scheme="http://zhuxiangzhi.com/tags/Python-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Python爬取贴吧某帖子的所有图片并下载]]></title>
