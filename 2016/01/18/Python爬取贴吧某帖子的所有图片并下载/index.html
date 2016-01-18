@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python爬取贴吧某帖子的所有图片并下载 | 朱襄之</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python爬取贴吧某帖子的所有图片并下载">
+<meta property="og:url" content="http://zhuxiangzhi.com/2016/01/18/Python爬取贴吧某帖子的所有图片并下载/index.html">
+<meta property="og:site_name" content="朱襄之">
+<meta property="og:description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
+<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E7%94%A8%E6%88%B7%E4%BA%A4%E4%BA%92.jpg">
+<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/Pyspan%E7%B1%BB.jpg">
+<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E5%9B%BE%E7%89%87url.jpg">
+<meta property="og:updated_time" content="2016-01-18T02:27:30.782Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python爬取贴吧某帖子的所有图片并下载">
+<meta name="twitter:description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
+  
+    <link rel="alternative" href="/atom.xml" title="朱襄之" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+<script type="text/javascript">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?0a0db6e30ac6bf62f3d95736f1a42a3f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">zhuxiangzhi</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">随笔</p>
+		
+		
+		<form><input type="text" class="search" placeholder=" Search..."></form>
+				
+
+
+		
+			<div id="switch-btn" class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/">标签云</a></li>
+				        
+							<li><a href="/about/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/138385115" title="新浪微博"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/zhu-xiang-zhi" title="知乎"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/262345307" title="QQ"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C-C-二维数组-查找/" style="font-size: 10px;">C/C++ 二维数组 查找</a> <a href="/tags/C-C-单链表-字符串-操作/" style="font-size: 10px;">C/C++ 单链表 字符串 操作</a> <a href="/tags/C-C-快速排序-冒泡排序/" style="font-size: 10px;">C/C++ 快速排序 冒泡排序</a> <a href="/tags/C-C-编程-位运算/" style="font-size: 10px;">C/C++ 编程 位运算</a> <a href="/tags/C-C-编程-幂运算/" style="font-size: 10px;">C/C++ 编程 幂运算</a> <a href="/tags/C-C-编程-链表结点删除-时间复杂度/" style="font-size: 10px;">C/C++ 编程 链表结点删除 时间复杂度</a> <a href="/tags/Python-BeautifulSoup-知乎/" style="font-size: 10px;">Python BeautifulSoup 知乎</a> <a href="/tags/Python-爬虫-贴吧-图片/" style="font-size: 10px;">Python 爬虫 贴吧 图片</a> <a href="/tags/ip-User-Agent/" style="font-size: 10px;">ip User-Agent</a> <a href="/tags/冬至/" style="font-size: 10px;">冬至</a> <a href="/tags/编程-C-C-Socket/" style="font-size: 10px;">编程 C/C++ Socket</a> <a href="/tags/胡军-天龙八部-刘涛-张纪中/" style="font-size: 20px;">胡军 天龙八部 刘涛 张纪中</a> <a href="/tags/金庸-射雕英雄传/" style="font-size: 10px;">金庸 射雕英雄传</a> <a href="/tags/金庸-武侠-魏晋风度/" style="font-size: 10px;">金庸 武侠 魏晋风度</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">记录点滴</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">zhuxiangzhi</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/avatar.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">zhuxiangzhi</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">随笔</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/">标签云</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="新浪微博"><a class="新浪微博" target="_blank" href="http://weibo.com/138385115" title="新浪微博"></a></li>
+					        
+								<li id="知乎"><a class="知乎" target="_blank" href="http://www.zhihu.com/people/zhu-xiang-zhi" title="知乎"></a></li>
+					        
+								<li id="QQ"><a class="QQ" target="_blank" href="/262345307" title="QQ"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Python爬取贴吧某帖子的所有图片并下载" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/18/Python爬取贴吧某帖子的所有图片并下载/" class="article-date">
+  	<time datetime="2016-01-18T02:26:29.000Z" itemprop="datePublished">2016-01-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python爬取贴吧某帖子的所有图片并下载
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python-爬虫-贴吧-图片/">Python 爬虫 贴吧 图片</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>《Lost》（中文名《迷失》）是我看过的两部美剧之一（另一部《越狱》），有段时间特别痴迷，以至于在梦里也常常感到自己会迷失。有些像天方夜谭，却又处处透露着真实的感情，特别喜欢剧中查理的一句话，Sometimes I just get lost in it，是的，谁又不曾对一件事、一个人沉迷过，而或许这个迷失的过程也是发现自我的过程，问己，问心。<br>闲言少叙，第二遍看迷失的时候对许多场景和对白特别喜欢，截图分享给了ll，上传到贴吧，今天想下载下来，但是图有点多一点点的下载确实很浪费时间，因此有了写个简单的脚本对该帖子的所有图片（我上传的）进行下载。<br>其中使用urllib2对网页进行抓取分析，使用urllib对图片进行下载，使用easygui进行简单的用户交互。<br>下面是代码：<br>首先设置编码格式，导入库，Beautifulsoup待用<figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># coding=utf-8</span></span><br><span class="line"><span class="preprocessor"><span class="keyword">import</span> easygui as g</span></span><br><span class="line"><span class="preprocessor"><span class="keyword">import</span> re,urllib2,urllib</span></span><br><span class="line">from BeautifulSoup <span class="preprocessor"><span class="keyword">import</span> BeautifulSoup</span></span><br></pre></td></tr></table></figure>
+</the></li>
+</ul>
+<p>使用easygui进行简单的用户交互，获取帖子的链接<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TBurl=g.<span class="function"><span class="title">enterbox</span><span class="params">(<span class="string">'请输入贴吧地址：'</span>,<span class="string">'www.zhuxiangzhi.com'</span>)</span></span></span><br><span class="line">Path=g.<span class="function"><span class="title">diropenbox</span><span class="params">(<span class="string">"请选择照片保存路径："</span>,<span class="string">'Path'</span>)</span></span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E7%94%A8%E6%88%B7%E4%BA%A4%E4%BA%92.jpg" alt=""><br>使用urllib2打开相关帖子<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHtml</span><span class="params">(TBurl)</span>:</span><span class="comment">#使用urllib2来获取网页的内容</span></span><br><span class="line">    page=urllib2.urlopen(TBurl)</span><br><span class="line">    html=page.read()</span><br><span class="line">    <span class="keyword">return</span> html</span><br></pre></td></tr></table></figure></p>
+<p>使用正则表达式来获取该帖子的页数和该帖子一共有多少张图片<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getPages</span><span class="params">(html)</span>:</span><span class="comment">#使用正则表达式来获取该帖子一共有几页，通过查看源代码可以看出在页面的底部有个span类包含了该信息</span></span><br><span class="line">    PageReg=re.compile(<span class="string">r'&lt;span class="red"&gt;(\d+)&lt;/span&gt;'</span>) <span class="comment">#通过网页源代码可以看到正则表达式相关代码</span></span><br><span class="line">    PageNum=re.findall(PageReg,html)</span><br><span class="line">    <span class="keyword">return</span> PageNum</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getImg</span><span class="params">(html)</span>:</span><span class="comment">#使用正则表达式来获取所有图片的链接</span></span><br><span class="line">    Imgreg=re.compile(<span class="string">r'class="BDE_Image".+?src="(.*?\.jpg)" [pwb][di][wcd][a_t][teh]'</span>) <span class="comment">#通过网页源代码可以看到正则表达式相关代码</span></span><br><span class="line">    ImgList=re.findall(Imgreg,html)</span><br><span class="line">    <span class="keyword">return</span> ImgList</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/Pyspan%E7%B1%BB.jpg" alt=""><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/Py%E5%9B%BE%E7%89%87url.jpg" alt=""><br>将帖子的链接输入并进行处理，可以根据正则表达式的处理得知一共有多少页和多少图片，其中多少页在第一页的span类中可以得到，而图片的数量可以通过一个for循环来进行判断<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">html=<span class="function"><span class="title">getHtml</span><span class="params">(TBurl)</span></span></span><br><span class="line">Pages=<span class="function"><span class="title">int</span><span class="params">(getPages(html)</span></span>[<span class="number">1</span>])</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"正在获取资源..."</span>)</span></span></span><br><span class="line">i=<span class="number">1</span></span><br><span class="line">FullList=[]</span><br><span class="line"><span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">1</span>,Pages+<span class="number">1</span>)</span></span>:#获取全部图片列表</span><br><span class="line">    FullList=<span class="function"><span class="title">getImg</span><span class="params">(getHtml(TBurl+<span class="string">'?pn='</span>+str(i)</span></span>))+FullList</span><br><span class="line">    i=i+<span class="number">1</span></span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"共获取到%s张图片..."</span> % len(FullList)</span></span>)</span><br><span class="line">n=<span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+<p>下载图片</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"开始下载图片..."</span>)</span></span></span><br><span class="line"><span class="keyword">for</span> imgurl <span class="keyword">in</span> FullList:#下载图片</span><br><span class="line">    urllib.<span class="function"><span class="title">urlretrieve</span><span class="params">(imgurl,Path+<span class="string">'\\%s.jpg'</span> % n)</span></span></span><br><span class="line">    <span class="function"><span class="title">print</span><span class="params">(<span class="string">"正在下载第%s张图片..."</span> % (n+<span class="number">1</span>)</span></span>)</span><br><span class="line">    n+=<span class="number">1</span></span><br><span class="line">g.<span class="function"><span class="title">msgbox</span><span class="params">(<span class="string">"下载完成！"</span>)</span></span></span><br></pre></td></tr></table></figure>
+<p>完整代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> easygui <span class="keyword">as</span> g</span><br><span class="line"><span class="keyword">import</span> re,urllib2,urllib</span><br><span class="line"><span class="keyword">from</span> BeautifulSoup <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">TBurl=g.enterbox(<span class="string">'请输入贴吧地址：'</span>,<span class="string">'www.zhuxiangzhi.com'</span>)</span><br><span class="line">Path=g.diropenbox(<span class="string">"请选择照片保存路径："</span>,<span class="string">'Path'</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHtml</span><span class="params">(TBurl)</span>:</span><span class="comment">#使用urllib2来获取网页的内容</span></span><br><span class="line">    page=urllib2.urlopen(TBurl)</span><br><span class="line">    html=page.read()</span><br><span class="line">    <span class="keyword">return</span> html</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getPages</span><span class="params">(html)</span>:</span><span class="comment">#使用正则表达式来获取该帖子一共有几页，通过查看源代码可以看出在页面的底部有个span类包含了该信息</span></span><br><span class="line">    PageReg=re.compile(<span class="string">r'&lt;span class="red"&gt;(\d+)&lt;/span&gt;'</span>)</span><br><span class="line">    PageNum=re.findall(PageReg,html)</span><br><span class="line">    <span class="keyword">return</span> PageNum</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getImg</span><span class="params">(html)</span>:</span><span class="comment">#使用正则表达式来获取所有图片的链接</span></span><br><span class="line">    imgreg=re.compile(<span class="string">r'class="BDE_Image".+?src="(.*?\.jpg)" [pwb][di][wcd][a_t][teh]'</span>)</span><br><span class="line">    imgList=re.findall(imgreg,html)</span><br><span class="line">    <span class="keyword">return</span> imgList</span><br><span class="line">html=getHtml(TBurl)</span><br><span class="line">Pages=int(getPages(html)[<span class="number">1</span>])</span><br><span class="line">print(<span class="string">"正在获取资源..."</span>)</span><br><span class="line">i=<span class="number">1</span></span><br><span class="line">FullList=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,Pages+<span class="number">1</span>):<span class="comment">#获取全部图片列表</span></span><br><span class="line">    FullList=getImg(getHtml(TBurl+<span class="string">'?pn='</span>+str(i)))+FullList</span><br><span class="line">    i=i+<span class="number">1</span></span><br><span class="line">print(<span class="string">"共获取到%s张图片..."</span> % len(FullList))</span><br><span class="line">n=<span class="number">0</span></span><br><span class="line">print(<span class="string">"开始下载图片..."</span>)</span><br><span class="line"><span class="keyword">for</span> imgurl <span class="keyword">in</span> FullList:<span class="comment">#下载图片</span></span><br><span class="line">    urllib.urlretrieve(imgurl,Path+<span class="string">'\\%s.jpg'</span> % n)</span><br><span class="line">    print(<span class="string">"正在下载第%s张图片..."</span> % (n+<span class="number">1</span>))</span><br><span class="line">    n+=<span class="number">1</span></span><br><span class="line">g.msgbox(<span class="string">"下载完成！"</span>)</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2016/01/18/Python爬取贴吧某帖子的所有图片并下载/">Python爬取贴吧某帖子的所有图片并下载</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 zhuxiangzhi 的个人博客">zhuxiangzhi</a></p>
+  <p><span>发布时间:</span>2016年01月18日 - 10时26分</p>
+  <p><span>最后更新:</span>2016年01月18日 - 10时27分</p>
+  <p>
+    <span>原始链接:</span><a class="post-url" href="/2016/01/18/Python爬取贴吧某帖子的所有图片并下载/" title="Python爬取贴吧某帖子的所有图片并下载">http://zhuxiangzhi.com/2016/01/18/Python爬取贴吧某帖子的所有图片并下载/</a>
+    <span class="copy-path" data-clipboard-text="原文: http://zhuxiangzhi.com/2016/01/18/Python爬取贴吧某帖子的所有图片并下载/　　作者: zhuxiangzhi" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.copy-path'); </script>
+</div>
+
+
+
+
+<nav id="article-nav">
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2016/01/12/Python爬取某答主在知乎的回答/">
+        Python爬取某答主在知乎的回答
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+  <div class="duoshuo" id="comments">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/01/18/Python爬取贴吧某帖子的所有图片并下载/" data-title="Python爬取贴吧某帖子的所有图片并下载" data-url="http://zhuxiangzhi.com/2016/01/18/Python爬取贴吧某帖子的所有图片并下载/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"zhuxiangzhi"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+  
+  
+    <div  class="post-nav-button">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/01/12/Python爬取某答主在知乎的回答/" title="下一篇: Python爬取某答主在知乎的回答">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+    
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: true
+        }
+        </script>
+     
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 zhuxiangzhi
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+<script>
+  var backgroundnum = 5;
+  var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+
+  $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+</script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
