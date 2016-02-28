@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2016-01-18T09:27:18.787Z</updated>
+  <updated>2016-02-28T03:15:59.743Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -13,6 +13,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[恒生电子2016年校园招聘笔试题目（C/C++和数据库部分）]]></title>
+    <link href="http://zhuxiangzhi.com/2016/02/28/%E6%81%92%E7%94%9F%E7%94%B5%E5%AD%902016%E5%B9%B4%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E7%AC%94%E8%AF%95%E9%A2%98%E7%9B%AE%EF%BC%88C-C-%E9%83%A8%E5%88%86%EF%BC%89/"/>
+    <id>http://zhuxiangzhi.com/2016/02/28/恒生电子2016年校园招聘笔试题目（C-C-部分）/</id>
+    <published>2016-02-28T03:14:16.000Z</published>
+    <updated>2016-02-28T03:15:59.743Z</updated>
+    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>一.不定项选择题.基础知识<br>1.下列叙述正确的是<br>A.C语言的源程序不必通过编译就可以直接运行<br>B.C语言中每条可执行语句最终都将被转换成二进制的机器指令<br>C.C语言程序经编译形成的二进制代码可以直接运行】<br>D.C语言的函数不可以单独进行编译</the></li>
+</ul>
+<p>2.为了防止一个用户的工作不适当的影响另一个用户，应该采取<br>A.完整性控制<br>B.安全性控制<br>C.并发控制<br>D.访问控制</p>
+<p>3.类定义中private、protected、public出现次数为<br>A.任意多次<br>B.至多一次<br>C.public至少一次<br>D.至少一次</p>
+<p>4.设栈s和队列q的厨师初始状态为空，元素a、b、c、d、e和f依次通过栈s，每个元素出站后立即进入队列q，若这留个元素出队列的顺序是b、d、c、f、e和a则栈s的容量至少应该是<br>A.3<br>B.4<br>C.5<br>D.6</p>
+<p>5.有如下一段代码，则该段代码的输出结果是：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> b=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">if</span>((a-b)&amp;&amp;(b=b-<span class="number">5</span>)||(a=b))</span><br><span class="line">&#123;</span><br><span class="line">	--a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a++);</span><br></pre></td></tr></table></figure></p>
+<p>A.2<br>B.3<br>C.4<br>D.5</p>
+<p>6.已知递归函数f(n)的功能是计算1+2+….+n且n&gt;=1，应该采用的代码段是：<br>A.if n&gt;1 then retrun 1 else return n+f(n-1)<br>B.if n&gt;1 then retrun 1 else return n+f(n+1)<br>C.if n&lt;1 then retrun 1 else return n+f(n-1)<br>A.if n&lt;1 then retrun 1 else return n+f(n+1)</p>
+<p>7.栈和队列的共同特点是<br>A.都是先进先出<br>B.都是先进后出<br>C.只允许在端点处插入和删除元素<br>D.没有共同点</p>
+<p>8.<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">typedef struct <span class="keyword">node</span><span class="identifier"></span><span class="title">&#123;</span><br><span class="line">int</span> data;</span><br><span class="line">struct <span class="keyword">node</span><span class="identifier"></span><span class="title">* link</span>;</span><br><span class="line">&#125;ListNode;</span><br></pre></td></tr></table></figure></p>
+<p>已知指针p所指结点不是尾节点，若在<em>p后插入结点</em>s则应该执行下列哪一操作<br>A.s-&gt;link=p;p-&gt;link=s;<br>B.s-&gt;link=p-&gt;link;p-&gt;link=s;<br>C.s-&gt;link=p-&gt;link;p=s;<br>D.p-&gt;link=s;s-&gt;link=p;</p>
+<p>9.系统中有两个进程A和B，每个进程都需要使用1台打印机和扫描仪但是系统中现在只有1台打印机和扫描仪，如果当前A已经获得一台打印机，进程B已经获得一台扫描仪，此时如果A申请扫描仪,B申请打印机，那么两个进程将会进入（）状态<br>A.竞争<br>B.死锁<br>C.互斥<br>D.同步</p>
+<p>10.下列关于子查询和Grope By的描述正确的有<br>A.没有出现Grope By子句后面的列名不能出现在Select子句非合计函数的表达式中<br>B.在Select子句的后面，只能有两种类型的表达式，一种是合计函数，一种是出现在Grope By子句的列名<br>C.不能再子查询中包含有Order By子句<br>D.如果子查询的结果为空，那么外查询条件始终不会成立。</p>
+<p>二.不定项选择题.语言知识（C/C++部分）<br>1.下列关于指针描述正确的是<br>A.指针是一种变量，该变量用来存放某个变量的地址值的<br>B.指针是一种无符号整数（unsigned int）。它是一个以当前系统寻址范围为取值范围的整数<br>C.指针数据和数据指针是一样的没有什么区别<br>D.在32位程序中，sizeof（char*）结果为1</p>
+<p>2.下段程序的输出结果是<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> iLoop=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(iLoop=<span class="number">0</span>;iLoop++&lt;<span class="number">10</span>;iLoop++)</span><br><span class="line">	&#123;</span><br><span class="line">		iLoop++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,++iLoop);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>A.10<br>B.11<br>C.13<br>D.14</p>
+<p>3.已知有结构体如下定义<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">typedef <span class="class"><span class="keyword">struct</span> <span class="title">tagNode</span></span></span><br><span class="line">&#123;</span><br><span class="line">	int iIndex;</span><br><span class="line">	<span class="class"><span class="keyword">union</span> <span class="title">U</span></span></span><br><span class="line">	&#123;</span><br><span class="line">		char cType;</span><br><span class="line">		int iType;</span><br><span class="line">		double dType;</span><br><span class="line">	&#125;ul;</span><br><span class="line">&#125;<span class="constant">NODE</span>,*<span class="constant">PNODE</span>;</span><br></pre></td></tr></table></figure></p>
+<p>在32位程序中，sizeof（PNODE）的结果是<br>A.4<br>B.12<br>C.16<br>D.以上都不是</p>
+<p>4.以下描述错误的是<br>A.continue语句的作用是终止整个循环的执行<br>B.continue语句的作用是结束本次循环的执行<br>C.continue语句和break语句都可以在switch语句中执行<br>D.break语句的作用是结束本次循环的执行</p>
+<p>5.已知有下代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> cArray[<span class="number">16</span>]=<span class="string">"hello world!"</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c\r\n"</span>,*(cArray+<span class="built_in">strlen</span>(cArray)-<span class="number">4</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>输出结果为：<br>A.w<br>B.o<br>C.r<br>D.h</p>
+<p>三.数据库<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%81%92%E7%94%9F2016%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E6%81%92%E7%94%9F2016SQL1.jpg" alt=""><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%81%92%E7%94%9F2016%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E6%81%92%E7%94%9F2016SQL2.jpg" alt=""><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%81%92%E7%94%9F2016%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E6%81%92%E7%94%9F2016SQL3.jpg" alt=""><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%81%92%E7%94%9F2016%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E6%81%92%E7%94%9F2016SQL4.jpg" alt=""></p>
+<p>四、编程题<br>已知有一组带小数的数值，（小数点后5位以内）存放在文件src.txt中，每个数值都已”,”隔开，存放的格式如下：<br>1.12,1.35,2.56,4.67，…，19.45，编程实现求文件src.txt文件中的平均值，需要考虑所有数据想家，可能存在溢出情况，记录到dst.txt中，先写解题思路，再编码实现</p>
+<p>五、算法题<br>编程实现36进制和10进制之间的相互转换。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
+<ul>
+<li>]]>
+    
+    </summary>
+    
+      <category term="校园招聘 恒生电子" scheme="http://zhuxiangzhi.com/tags/%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98-%E6%81%92%E7%94%9F%E7%94%B5%E5%AD%90/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Python实现直方图均衡化]]></title>
@@ -952,68 +997,6 @@ void ControlPC(CString AndroidControl);
 <p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/jianqi.jpg" alt="jianqi"><br>五毛钱特效是从今年《盗墓笔记》开始流行的词，不过回头看很多剧，确实连五毛钱的特效都不值，比如这段，但是相较于TVB的特效，确实是有进步了的。 剑气碧烟横一章，个人觉得，金庸对于这种宏大的战场的表述已经足够精彩了，当然还有更精彩的在后面。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/jiumozhi.jpg" alt="jiunozhi"></p>
 <p>为了所谓的慕容博所托，拜见枯荣大师，随后便参透枯荣大师所参的“枯禅”。鸠摩智不可不谓得道高僧，也是聪明之极，但其前半生总是放不掉贪、痴、嗔，也就有了后来的种种。一旦幡然醒悟，却又能迅速脱离这些，而这一切也都凸显了其极高的佛性、悟性，终成一代高僧。</p>
 <p>鸠摩智带走段誉，也就出现了向来痴、从此醉。</p>
-<p><strong>未完待续</strong></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><Excerpt in index | 首页摘要><br>金庸巨著《天龙八部》是本人最喜欢的一部武侠小说。作为武侠小说的集大成者可谓金老的巅峰之作。而张纪中任制片人、胡军等人主演的03版《天龙八部》也是本人最喜欢的武侠剧甚至最喜欢的电视剧。</p>
-<ul>
-<li>]]>
-    
-    </summary>
-    
-      <category term="胡军 天龙八部 刘涛 张纪中" scheme="http://zhuxiangzhi.com/tags/%E8%83%A1%E5%86%9B-%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8-%E5%88%98%E6%B6%9B-%E5%BC%A0%E7%BA%AA%E4%B8%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[如何评价胡军版天龙八部（一）]]></title>
-    <link href="http://zhuxiangzhi.com/2015/12/10/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%83%A1%E5%86%9B%E7%89%88%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/"/>
-    <id>http://zhuxiangzhi.com/2015/12/10/如何评价胡军版天龙八部/</id>
-    <published>2015-12-10T11:09:59.000Z</published>
-    <updated>2015-12-11T03:26:54.953Z</updated>
-    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br>金庸巨著《天龙八部》是本人最喜欢的一部武侠小说。作为武侠小说的集大成者可谓金老的巅峰之作。而张纪中任制片人、胡军等人主演的03版《天龙八部》也是本人最喜欢的武侠剧甚至最喜欢的电视剧。</excerpt></p>
-<ul>
-<li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><br>这个我一定要回答！</the></li>
-</ul>
-<p><strong>先给出我自己的观点，胡军版《天龙八部》是大胡子所参与拍摄（导演、制片人）武侠剧中最完美的，也是包括TVB等武侠剧中我认为最为精彩的一部。</strong></p>
-<p>本剧我应该看了不止五遍，有精彩的地方或者契合点我都会截图，但是因为误删所有存档都丢了导致现在只能再重新看一遍。慢慢坑，结合原著来贴图，图多，流量慎点。</p>
-<p>本答案主要从以下几个方面来表述： </p>
-<p><strong>一、部分截图和原著的契合。按章节进行，每一个章节尽量去寻找在剧中对应的截图，由于《天龙八部》章节名由几首填词组成，读起来朗朗上口，看起来也方便顺便带诸位回头看下天龙全书。</strong><br><strong>二、既然谈到如何评价，自然少不了对比，对比不谈黄日华版的，似乎大家也都回不到童年的那种“江湖”感。</strong><br><strong>关于动作指导答主不太熟悉，但是可以从几场经典场面刻画来进行分析。</strong><br><strong>题主提到了片尾曲《宽恕》，其实插曲《仰望》也有分析的价值。</strong></p>
-<p><strong>先从手中有的截图开始</strong></p>
-<p><strong>第一章 青衫磊落险峰行</strong><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/qingshanleiluo.jpg" alt="qingshan"></p>
-<p>看过胡军版《天龙八部》的朋友或许都还记得，剧情并不是按照原著中从段誉开始的，而是雁门关一战众高手和萧远山的血腥场面开始。既然按照原著章节来，还是从段誉开始截图吧。 截图中“山红涧碧纷烂漫”出自韩愈《山石》，在《天龙八部》原著中并无提及，且看：</p>
-<blockquote>
-<p>山石荦确行径微，黄昏到寺蝙蝠飞。<br>升堂坐阶新雨足，芭蕉叶大栀子肥。<br>僧言古壁佛画好，以火来照所见稀。<br>铺床拂席置羹饭，疏粝亦足饱我饥。<br>夜深静卧百虫绝，清月出岭光入扉。<br>天明独去无道路，出入高下穷烟霏。<br>山红涧碧纷烂漫，时见松枥皆十围。<br>当流赤足踏涧石，水声激激风吹衣。<br>人生如此自可乐，岂必局束为人鞿？<br>嗟哉吾党二三子，安得至老不更归。</p>
-</blockquote>
-<p>提到这首诗，实在是牵强附会，不过答主觉得，既然大胡子有心让这首诗出现在字幕中，自然有其道理。这首诗所述应该是出游过程中所见所感。而段誉的出游却不是如此心境，父亲、伯父，逼迫自己学武，而段誉又志不在此，因此烦闷而逃出家庭的禁锢。竟而碰到了无量剑派和神农帮一堆杂七杂八的事情，也开启了段誉的江湖之旅。</p>
-<p>《山石》中“僧言古壁佛画好，以火来照所见稀”二句也可揭示《天龙八部》的主题—-求不得。 段誉作为皇家世子，未来皇位继承人，段氏武学的承载者，却一心向佛，不愿习武，更不愿杀生。却在接下来的行走江湖中，不知不觉习武、误打误撞伤人。</p>
-<p>大胡子的金庸剧的拍摄确实有许多值的诟病的地方，但单单从选景来看，还是高出其他武侠制作一筹的。 截图中（不是青衫，或许是不敢颠覆陈浩民版本或者说青衫在视觉效果上不如林志颖穿一袭白衣）林志颖段誉轻摇折扇，漫步短吟。对段誉这并无江湖经历的贵公子的描述真的是恰到好处。红色枫叶，雾里山峰，让人如痴如醉。带我们走入这个气势磅礴的江湖。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/zhongling.jpg" alt="zhongling"></p>
-<p>钟灵的可爱和鬼精灵，众位朋友可还记得“你吃瓜子不吃”？</p>
-<p><strong>第二章 玉璧月华明</strong></p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/shenxianjiejie.jpg" alt="shenxianjiejie"></p>
-<p>电视剧中是有这部分的相关拍摄的。但是并没有原著中那么具体的描述，比如扯掉藤蔓，擦拭干净看到月光反射照在玉璧上，只是段誉轻轻擦拭之后，看到练剑的影子。截图不太好截，而且单单贴这张截图会显突兀。只好委曲求全，贴一下李秋水小妹（书中并未提到李沧海三个字）的像了。</p>
-<p>下面是《天龙八部》中对玉像的描述：</p>
-<blockquote>
-<p>见这女子虽是仪态万方，却似并非活人，大着胆子再行细看，才瞧出乃是一座白玉雕成的玉像。&gt;这玉像与生人一般大小，身上一件淡黄色绸衫微微颤动；更奇的是一对眸子莹然有光，神彩飞扬&gt;。<br>……<br>玉像脸上白玉的纹理中隐隐透出晕红之色，更与常人肌肤无异。段誉侧过身子看那玉像时，只见&gt;她眼光跟着转将过来，便似活了一般。他大吃一惊，侧头向右，玉像的眼光似乎也对着他移动。&gt;不论他站在那一边，玉像的眼光始终向着他，眼光中的神色更是难以捉摸，似喜似爱，似是情意&gt;深挚，又似黯然神伤。</p>
-</blockquote>
-<p>电视剧的拍摄是从远到近慢慢放大而后转动视角给在了这个玉像上的。当然，书中写到是用黑宝石雕刻而成而不是这般粗制滥造，除了玉像眼神的单调，其他比如绸衫微微颤动是可以感触到的。同时加上了段誉痴傻的表情，来衬托玉像的美，哦不，是玉像的那个神，传神。 段誉去万劫谷找钟万仇求救，误打误撞的碰到无量派私奔弟子，又机缘巧合的得一身几乎无人匹敌的神功。然后，然后。。。马上要遇到木婉清，婉妹，华妃凉凉。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/laoyanyuan.jpg" alt="laoyanyuan"><br>老戏骨的演技，不得不服。 </p>
-<p><strong>第三章 马疾幽香</strong></p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/majiyouxiang.jpg" alt="majiyouxiang"></p>
-<blockquote>
-<p>只觉自己后颈靠在一人身上，鼻中闻到阵阵幽香，正是那黑衣女郎身上的香气。蹄声得得，既轻&gt;且稳，敌人的追逐喊杀声已在身后渐渐远去。黑玫瑰全身黑毛，那女郎全身黑衣，黑夜中一团漆&gt;黑，睁眼什么都瞧不见，惟有一股芬馥之气缭绕鼻际，更增几分诡秘。<br>黑玫瑰奔了一阵，敌人喧叫声已丝毫不闻。段誉道：“姑娘，没料到你这么好本事，请放我起来&gt;吧。”黑衣女郎哼了一声，并不理睬。段誉手脚给带子紧紧缚住了，黑玫瑰每跨一步，带子束缚处&gt;便收紧一下，手脚步越来越痛，加之脚高头低，斜悬马背，头脑中一阵阵的晕眩，当真说不出的&gt;难受，又道：“姑娘，快放了我！”</p>
-</blockquote>
-<p>不谈选角，蒋欣对木婉清这个角色的刻画可谓入木三分，刁蛮、任性、外表冷峻、内心温热、直率等性格一一表现出来。而黑衣、黑玫瑰、黑面纱的选择也非钟汉良版的黑丝袜套头可比。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/wanxiqingyang.jpg" alt="muwanqing"><br>想来知乎上的诸位朋友对这两句也已经足够熟悉，不再做过多解释了。</p>
-<p>第四章 崖高人远</p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/yagaorenyuan.jpg" alt="yagaorenyuan"></p>
-<p>不知道诸位看到这个镜头的时候作何想，我这个镜头来回看了很多遍，除了美就是美。在崖高人远这一章节中，被岳老三逼到毫无退路的木婉清，以真面目示段誉，并以身相许。这一段的刻画极其尊重原著，包括很小的细节，每一个对话。 <strong>当然配以岳老三的“傻”更增一乐。</strong><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/yuelaosan.jpg" alt="yuelaosan"><br>如若从诨号来看，南海鳄神岳老三是恶人吗？从书中并没有正面写到岳老三有多恶，而是傻的可爱，和包不同、风波恶一样，他们是没有主角光环的配角、炮灰。但是他们的存在绝不仅仅是为了衬托主角，而是真实的存在，有血有肉的。<strong>而张纪中版《天龙八部》更是让这些小角色承载了更多的东西。</strong></p>
-<p><strong>第五章 微步彀纹生</strong></p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/weibu.jpg" alt="weibu"></p>
-<p>此时，四大恶人已出其三，对比起叶二娘和云中鹤的劣迹斑斑，更是凸显了岳老三的可爱。而后便是段誉练习《凌波微波》这门功夫了，想来喜欢曹子建或者玩三国杀的朋友都还记得那些经典的句子。 截图也是不太清晰，但足以彰显章节标题：微步彀纹生。</p>
-<blockquote>
-<p>这般练了数日，‘凌波微步’已走得颇为纯熟，不须再数呼吸，纵然疾行，气息也已无所窒滞。心意既畅，跨步时渐渐想到‘洛神赋’中那些与‘凌波微步’有关的句子：“仿佛兮若轻云之蔽月，飘飘兮若流风之回雪”，“忽焉纵体，以遨以嬉”，“神光离合，乍阴乍阳”，“辣轻躯以鹤立，若将飞而未翔”，“体迅飞凫，飘忽若神”，“动无常则，若危若安。进止难期，若往若还”。&gt;</p>
-</blockquote>
-<p>在回头寻找木婉清的过程中，段公子凌波微步神功已成，再也无人能阻挡他的步伐了。更神奇的是：莽牯朱蛤吃进肚，从此百毒都让路。初读天龙并不了解莽牯朱蛤的朋友，谁又能知道这是金老赋予段誉的主角光环呢。大胡子在此剧中对这一段的拍摄也可谓对原著的还原，精彩之极。 </p>
 <p><strong>未完待续</strong></p>
 ]]></content>
     <summary type="html">
