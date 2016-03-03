@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2016-03-01T12:43:30.373Z</updated>
+  <updated>2016-03-03T11:56:17.842Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -13,6 +13,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[恒生电子2016年校园招聘笔试题目（C/C++部分）（B卷）]]></title>
+    <link href="http://zhuxiangzhi.com/2016/03/03/%E6%81%92%E7%94%9F%E7%94%B5%E5%AD%902016%E5%B9%B4%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E7%AC%94%E8%AF%95%E9%A2%98%E7%9B%AE%EF%BC%88C-C-%E9%83%A8%E5%88%86%EF%BC%89%EF%BC%88B%E5%8D%B7%EF%BC%89/"/>
+    <id>http://zhuxiangzhi.com/2016/03/03/恒生电子2016年校园招聘笔试题目（C-C-部分）（B卷）/</id>
+    <published>2016-03-03T11:55:20.000Z</published>
+    <updated>2016-03-03T11:56:17.842Z</updated>
+    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>恒生电子2016年校园招聘笔试题目（C/C++和数据库部分【B卷】）<br>1.C语言中关于静态变量说法正确的是<br>A.静态变量和常量的作用相同<br>B.<strong>函数中的静态变量，在函数退出后不被释放</strong><br>C.静态变量只可以赋值一次，赋值后则不能改变<br>D.静态全局变量的作用域为一个程序的所有源文件</the></li>
+</ul>
+<p>2.已知某二叉树的先序和中序遍历分别为ABCDEF和CBAEDF则该二叉树的后序遍历为<br>A.CBDEFA<br><strong>B.CBEFDA</strong><br>C.CBFEDA<br>D.CDEFBA</p>
+<p>3.下面描述正确的有<br><strong>A.公有继承时基类中的public成员在派生类中仍是public的</strong><br>B.公有继承时基类中的private成员在派生类中仍是private的<br><strong>C.公有继承时基类中的protected成员在派生类中仍是protected的</strong><br><strong>D.私有继承时基类中的public成员在派生类中是private的</strong><br>基类中的私有成员在派生类中是隐蔽的，只能在基类内部访问。派生类中的成员不能访问基类中的私有成员，但是可以访问基类中的共有成员和保护成员。</p>
+<p>4.以下关于数据库中索引的描述正确的是<br>A.只要允许，任何时候都应该添加索引以加快查询速度<br>B.无论记录多少，使用索引都能给查询带来提升<br><strong>C.每次update/insert/delete操作都回导致索引重新更新<br>D.索引可以避免全表扫描</strong></p>
+<p>5.对于数据库中的视图，下列描述正确的有<br>A.占用与原表一样的内存空间<br><strong>B.可以进行部分insert、update、delete等操作<br>C.可以建立索引</strong><br>D.不可以建立触发器</p>
+<p>6.进栈a、b、c、d，出栈不可能是<br>A.abcd<br><strong>B.cabd</strong><br>C.dcba<br>D.bcda</p>
+<p>7.如果c为字符型变量，判断c是否为空格不能使用（空格对应的ascii马为32）<br><strong>A.if(c==’32’)</strong><br>B.if(c==32)<br>C.if(c==’\40’)<br>D.if(c==’ ‘)</p>
+<p>8.算数运算符、赋值运算符、和关系运算符的优先级<br>A.算数运算、复制运算、关系运算<br><strong>B.算数运算、关系运算、赋值运算</strong><br>C.关系运算、赋值运算、算数运算<br>D.关系运算、算数运算、赋值运算</p>
+<p>9.下列程序的输出结果是<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">10</span>,y=<span class="number">10</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,x--,--y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>10,9</strong></p>
+<p>10.数据库的题目，看不清</p>
+<p>C语言部分<br>1.逻辑运算符两侧运算对象的数据类型<br>A.0或1<br>B.0和非零整数<br>C.只能是整形或者字符型数据<br><strong>D.任何类型的数据都可以</strong></p>
+<p>2.以下语句描述错的是<br><strong>A.continue语句的作用是终止整个循环的执行</strong><br>B.continue语句的作用是结束本次循环的执行<br>C.continue语句和break语句都可以在switch语句中执行（break之后是执行switch语句下面的语句，continue之后执行switch内部语句）<br>D.break语句的作用是结束本次循环的执行</p>
+<p>3.C语言中非空的基本数据类型包括<br>A.整型、实型、逻辑型<br><strong>B.整型、实型、字符型</strong><br>C.整型、字符型、逻辑型<br>D.整型、实型、逻辑型、字符型</p>
+<p>4.下列函数的功能<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int <span class="function"><span class="keyword">fun</span>(<span class="title">char</span></span>* s)</span><br><span class="line">&#123;</span><br><span class="line">	char* t=s;</span><br><span class="line">	<span class="keyword">while</span>(*t++);</span><br><span class="line">		<span class="keyword">return</span>(t-s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>A.比较两个字符串的大小<br>B.<strong>计算s所指字符串占用的字节的个数</strong><br>C.计算s所指字符串的长度<br>D.将s所指的字符串复制到字符串t中</p>
+<p>5.i和s是整型变量，下列输出结果是<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">for</span><span class="params">(i=<span class="number">0</span>,s=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++,s++)</span></span></span><br><span class="line">	<span class="function"><span class="title">printf</span><span class="params">(<span class="string">"%d %d\n"</span>,i,s)</span></span></span><br></pre></td></tr></table></figure></p>
+<p><strong>10,10</strong></p>
+<p>三.数据库题目<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%81%92%E7%94%9F2016%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E6%81%92%E7%94%9F%E7%94%B5%E5%AD%902016%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98C%E5%8D%B7%E7%AC%94%E8%AF%95%E9%A2%98.jpg" alt=""></p>
+<p>第一题<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">create</span> <span class="keyword">index</span> ifundacco</span><br><span class="line"><span class="keyword">on</span> <span class="keyword">table</span> tshares</span><br><span class="line"><span class="keyword">go</span></span></span><br></pre></td></tr></table></figure></p>
+<p>第二题<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">alter</span> <span class="keyword">table</span> tshares</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">column</span> c_fundcode varchar2(<span class="number">8</span>)</span><br><span class="line"><span class="keyword">go</span></span></span><br></pre></td></tr></table></figure></p>
+<p>第三题<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">select</span> <span class="keyword">sum</span>(f_shares)</span><br><span class="line"><span class="keyword">from</span> <span class="keyword">table</span> tshares</span><br><span class="line">grope <span class="keyword">by</span> c_agentno <span class="keyword">or</span> c_netno</span><br><span class="line"><span class="keyword">go</span></span></span><br></pre></td></tr></table></figure></p>
+<p>第四题<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">select</span> <span class="keyword">count</span>*</span><br><span class="line"><span class="keyword">from</span> <span class="keyword">table</span> tshares</span><br><span class="line"><span class="keyword">where</span> c_fundacco <span class="keyword">or</span> c_fundcode <span class="keyword">in</span></span><br><span class="line">(<span class="keyword">select</span> c_fund&gt;<span class="number">2</span> <span class="keyword">or</span> c_fundecode&gt;<span class="number">2</span>)</span><br><span class="line"><span class="keyword">go</span></span></span><br></pre></td></tr></table></figure></p>
+<p>第五题<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">alter</span> <span class="keyword">table</span> tshares</span><br><span class="line"><span class="keyword">update</span> tshares</span><br><span class="line"><span class="keyword">set</span> f_shares=<span class="number">8000</span></span><br><span class="line"><span class="keyword">where</span> c_fundacco=<span class="string">'100008'</span> <span class="keyword">and</span> c_netno=<span class="keyword">max</span>(c_netno)</span><br><span class="line"><span class="keyword">go</span></span></span><br></pre></td></tr></table></figure></p>
+<p>四.编程题<br>HL为单链表的表头指针，试写出在该单链表中查找具有给定元素item的算法<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">bool Find(LNode* HL,ElemType item)</span><br><span class="line">&#123;</span><br><span class="line">	LNode*=HL;</span><br><span class="line">	<span class="keyword">while</span> p</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(p<span class="subst">-&gt;</span><span class="built_in">data</span>==item)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> p=p<span class="subst">-&gt;</span>next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>五.算法题<br>实现二分查找的递归算法<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">halfSearch</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> low,<span class="keyword">int</span> high,<span class="keyword">int</span> keyword)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(low&lt;=high)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> mid=(low+high)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(keyword==A[mid])</span><br><span class="line">			<span class="keyword">return</span> mid;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(keyword&lt;A[mid])</span><br><span class="line">			<span class="keyword">return</span> hafSearch(A,low,mid-<span class="number">1</span>,keyword);</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(keyword&gt;A[mid])</span><br><span class="line">			<span class="keyword">return</span> halfSearch(A,mid+<span class="number">1</span>,high,keyword);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>二分查找的非递归算法<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">halfSearch</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> keyword)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> low=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> high=<span class="keyword">sizeof</span>(A)-<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(low&lt;high)</span><br><span class="line">	&#123;</span><br><span class="line">		mid=(low+high)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(keyword==mid)</span><br><span class="line">			<span class="keyword">return</span> mid;</span><br><span class="line">		<span class="keyword">if</span>(keyword&lt;mid)</span><br><span class="line">			high=mid-<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(keyword&gt;mid)</span><br><span class="line">			low=mid+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
+<ul>
+<li>]]>
+    
+    </summary>
+    
+      <category term="校园招聘 恒生电子" scheme="http://zhuxiangzhi.com/tags/%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98-%E6%81%92%E7%94%9F%E7%94%B5%E5%AD%90/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[恒生电子2016年校园招聘笔试题目（C/C++和数据库部分）]]></title>
@@ -959,59 +1008,6 @@ void ControlPC(CString AndroidControl);
     </summary>
     
       <category term="编程 C/C++ Socket" scheme="http://zhuxiangzhi.com/tags/%E7%BC%96%E7%A8%8B-C-C-Socket/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[如何评价胡军版天龙八部（二）]]></title>
-    <link href="http://zhuxiangzhi.com/2015/12/11/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%83%A1%E5%86%9B%E7%89%88%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://zhuxiangzhi.com/2015/12/11/如何评价胡军版天龙八部（二）/</id>
-    <published>2015-12-11T08:02:26.000Z</published>
-    <updated>2015-12-11T08:25:01.763Z</updated>
-    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br>金庸巨著《天龙八部》是本人最喜欢的一部武侠小说。作为武侠小说的集大成者可谓金老的巅峰之作。而张纪中任制片人、胡军等人主演的03版《天龙八部》也是本人最喜欢的武侠剧甚至最喜欢的电视剧。</excerpt></p>
-<ul>
-<li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><br><strong>接前文内容</strong></the></li>
-</ul>
-<p><strong>第六章 谁家弟子谁家院</strong><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/shuijia.jpg" alt="shuijia"><br>朱丹臣和段誉机智的唐诗对和、一路躲、一路斗，斗到了刀白凤的门前。包不同曾说过段誉油嘴滑舌，从段誉和刀白凤的对话来看，绝非虚言。作为儿子，让父母重聚也是孝心一番。剧中对王妃的回归的盛大场面很多的画面。而这一切都是在木婉清的意料之外的，他不知道段誉的真实身份，不知道关于段誉的很多。甚至不知道她面对的是大理国的皇帝。 糊里糊涂的岳老三拜段誉为师<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/yuelaosanbaishi.jpg" alt="baishi"></p>
-<p><strong>第七章 无计悔多情</strong></p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/wujihuiduoqing.jpg" alt="wujihui"></p>
-<p>木婉清暗伤刀白凤，却不料伤了段誉。而后关于秦红棉是谁的对话，像极了原著中的对话。而这一切在段正淳揭开真相之后，徒留黯然神伤。随后秦红棉、甘宝宝出现，第一次学习到段正淳的能力。其实纵观全书中关于甘宝宝性格的描写，我觉得她才是段正淳最完美的情人。你我虽有情，但身为有夫之妇，不可再跨越这道坎，不然只会铸错。</p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/duanerduoqing.jpg" alt="duanerduoqing"></p>
-<blockquote>
-<p>段正淳走到钟夫人身边，笑道：“宝宝，我也香香你的脸，许不许？”钟夫人庄严道：“我是有夫之妇，决不能坏了我丈夫的名声。你只要碰我一下，我立时咬断舌头，死在你的面前。”<br>段正淳见她神色凛然，说得斩钉截铁，倒也不敢亵渎，问道：“宝宝，你嫁了怎么样的一个丈夫啊？”钟夫人道：“我丈夫样子丑陋，脾气古怪，武功不如你，人才不如你，更没你的富贵荣华。可是他一心一意的待我，我也一心一意的待他。我若有半分对不起他，教我甘宝宝天诛地灭，万劫不得超生。我跟你说，我跟他住的地方叫作‘万劫谷’，那名字便因我这毒誓而来。”</p>
-</blockquote>
-<p>不似原著中延庆太子到第七章才已青袍怪客的身份出现，大胡子《天龙八部》中第一集，段延庆已经出现并和萧峰有过交手。或许这样写更能突出萧峰是第一男主的地位吧。而在电视剧的第四集中，即无计悔多情一节，也出现了丐帮的聚会、康敏和马大元的出现，暂且不表。</p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/xiongmei.jpg" alt="xiongmei"></p>
-<p>剧中这部分完全看不出二人的演技，但是截图中这份楚楚可怜，谁人会不心动？还好，有了台词的弥补，以及观众对二人服阴阳和合散之后反应的期待。 </p>
-<p><strong>第八章 虎啸龙吟</strong></p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/yiyangzhi.jpg" alt="huxiao"></p>
-<p>要说虎啸龙吟这个特效，是值五毛钱的。 段延庆的自信：</p>
-<blockquote>
-<p>青袍客道：“嘿嘿！你自称是大理国皇帝，我却只当你是谋朝篡位的乱臣贼子。你有胆子，尽管去调神策军、御林军来好了。我跟你说，我势力固然远不如你，可是要先杀段誉这小贼却易如反掌。你此刻跟我动手，数百招后或能胜得了我，但想杀我，却也千难万难。我只教不死，你便救不了段誉性命。</p>
-</blockquote>
-<p>黄眉僧的高深：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/huangmei.jpg" alt="huangmei"></p>
-<p>关于这段的描述，答主在另一个问题里截取了片段：如何驳倒算命先生？ - 知乎用户的回答 而关于通过《天龙八部》可以看到金庸棋力的回答，可以参看 @高飞龙 的回答 如何评价《天龙八部》中的围棋元素？ - 高飞龙的回答 在这之后，便是，段誉知道了钟灵原来也是自己的妹妹。</p>
-<p><strong>第九章 换巢鸾凤</strong></p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/huanchaoluanfeng.jpg" alt="huanchao"></p>
-<blockquote>
-<p>钟万仇笑道：“孤男寡女，赤身露体的躲在一间黑屋子里，还能有什么好事做出来？哈哈，哈哈，大家瞧明白了！”<br>钟万仇大笑声中，只见一个青年男子披头散发，赤裸着上身走将出来，下身只系着一条短裤，露出了两条大腿，正是段誉，手中横抱着一个女子。那女子缩在他的怀里，也只穿着贴身小衣，露出了手臂、大腿、背心上雪白粉嫩的肌肤。<br>保定帝满脸羞惭。段正淳低下了头不敢抬起。刀白凤双目含泪，喃喃的道：“冤孽，冤孽！”高升泰解下长袍，要去给段誉披在身上。马五德一心要讨好段氏兄弟，忙闪身遮在段誉身前。南海鳄神叫道：“王八羔子，滚开！”<br>钟万仇哈哈大笑，十分得意，突然间笑声止歇，顿了一顿，蓦地里惨声大叫：“灵儿，是你么？”</p>
-</blockquote>
-<p>剧中这段的描写甚是精彩，有时间的话不妨重新观看。钟万仇机关算尽，却不曾想却害了自己，害了钟灵。是好是坏，谁也说不准。但从电视剧对原著的还原来看，不好扣分。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/zhongling1.jpg" alt="duaner1"><br>在段誉钟灵出现之后，段家兄弟悬在心中的时候落下了不说，段二竟然去调戏起了钟万仇，然而他怎又会知道，钟灵原来也是自己的女儿？ </p>
-<p><strong>第十章 剑气碧烟横</strong></p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/jianqi.jpg" alt="jianqi"><br>五毛钱特效是从今年《盗墓笔记》开始流行的词，不过回头看很多剧，确实连五毛钱的特效都不值，比如这段，但是相较于TVB的特效，确实是有进步了的。 剑气碧烟横一章，个人觉得，金庸对于这种宏大的战场的表述已经足够精彩了，当然还有更精彩的在后面。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/jiumozhi.jpg" alt="jiunozhi"></p>
-<p>为了所谓的慕容博所托，拜见枯荣大师，随后便参透枯荣大师所参的“枯禅”。鸠摩智不可不谓得道高僧，也是聪明之极，但其前半生总是放不掉贪、痴、嗔，也就有了后来的种种。一旦幡然醒悟，却又能迅速脱离这些，而这一切也都凸显了其极高的佛性、悟性，终成一代高僧。</p>
-<p>鸠摩智带走段誉，也就出现了向来痴、从此醉。</p>
-<p><strong>未完待续</strong></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><Excerpt in index | 首页摘要><br>金庸巨著《天龙八部》是本人最喜欢的一部武侠小说。作为武侠小说的集大成者可谓金老的巅峰之作。而张纪中任制片人、胡军等人主演的03版《天龙八部》也是本人最喜欢的武侠剧甚至最喜欢的电视剧。</p>
-<ul>
-<li>]]>
-    
-    </summary>
-    
-      <category term="胡军 天龙八部 刘涛 张纪中" scheme="http://zhuxiangzhi.com/tags/%E8%83%A1%E5%86%9B-%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8-%E5%88%98%E6%B6%9B-%E5%BC%A0%E7%BA%AA%E4%B8%AD/"/>
     
   </entry>
   
