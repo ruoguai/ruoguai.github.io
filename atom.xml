@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2016-03-10T12:29:44.273Z</updated>
+  <updated>2016-03-10T12:40:37.825Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -19,14 +19,14 @@
     <link href="http://zhuxiangzhi.com/2016/03/10/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%862016%E5%B9%B4%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E7%AC%94%E8%AF%95%E9%A2%98%E7%9B%AE%EF%BC%88B%E5%8D%B7%EF%BC%89/"/>
     <id>http://zhuxiangzhi.com/2016/03/10/海康威视2016年校园招聘笔试题目（B卷）/</id>
     <published>2016-03-10T12:21:09.000Z</published>
-    <updated>2016-03-10T12:29:44.273Z</updated>
+    <updated>2016-03-10T12:40:37.825Z</updated>
     <content type="html"><![CDATA[<p><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
 <ul>
 <li><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文=""><br>一.选择题<br>1.用class定义的类，其成员的默认访问属性是：<br><strong>A. private</strong><br>B. public<br>C. protected<br>D. 以上都不是</the></li>
 </ul>
 <p>2.以下程序的输出结果是：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">    <span class="keyword">int</span> a;  </span><br><span class="line">    <span class="keyword">char</span> c=<span class="number">10</span>;  </span><br><span class="line">    <span class="keyword">float</span> f=<span class="number">100.0</span>;  </span><br><span class="line">    <span class="keyword">double</span> x;  </span><br><span class="line">    a=f/=c*=(x=<span class="number">6.5</span>);  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d %3.1f %3.1f\n"</span>,a,c,f,x);  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>答：<strong>1,65,1.5,650</strong></p>
+<p>答：<strong>1,65,1.5,6.5</strong></p>
 <p>3.关于纯虚函数下列说法正确的是<br>A. 派生类都必须实现基类的纯虚函数<br><strong>B. 纯虚函数都是以“=0”结束</strong><br>C. 纯虚函数是给出的实现版本的（即无函数体的）的虚函数<br>D. 含有纯虚函数的一定是派生类</p>
 <p>4.下列哪一个是析构函数的特征<br>A. 析构函数的定义只能在类体内<br><strong>B. 一个类中只能定义一个析构函数</strong><br>C. 析构函数名和类名不同<br>D. 析构函数可以有一个或者多个参数</p>
 <p>5.若二叉树中有n个度为2的结点，则该二叉树中的叶子结点数为<br><strong>n+1</strong></p>
