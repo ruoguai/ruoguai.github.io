@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2016-03-10T12:19:49.328Z</updated>
+  <updated>2016-03-10T12:29:44.273Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -13,6 +13,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[海康威视2016年校园招聘笔试题目（B卷）]]></title>
+    <link href="http://zhuxiangzhi.com/2016/03/10/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%862016%E5%B9%B4%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E7%AC%94%E8%AF%95%E9%A2%98%E7%9B%AE%EF%BC%88B%E5%8D%B7%EF%BC%89/"/>
+    <id>http://zhuxiangzhi.com/2016/03/10/海康威视2016年校园招聘笔试题目（B卷）/</id>
+    <published>2016-03-10T12:21:09.000Z</published>
+    <updated>2016-03-10T12:29:44.273Z</updated>
+    <content type="html"><![CDATA[<p><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>一.选择题<br>1.用class定义的类，其成员的默认访问属性是：<br><strong>A. private</strong><br>B. public<br>C. protected<br>D. 以上都不是</the></li>
+</ul>
+<p>2.以下程序的输出结果是：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">    <span class="keyword">int</span> a;  </span><br><span class="line">    <span class="keyword">char</span> c=<span class="number">10</span>;  </span><br><span class="line">    <span class="keyword">float</span> f=<span class="number">100.0</span>;  </span><br><span class="line">    <span class="keyword">double</span> x;  </span><br><span class="line">    a=f/=c*=(x=<span class="number">6.5</span>);  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d %3.1f %3.1f\n"</span>,a,c,f,x);  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>答：<strong>1,65,1.5,650</strong></p>
+<p>3.关于纯虚函数下列说法正确的是<br>A. 派生类都必须实现基类的纯虚函数<br><strong>B. 纯虚函数都是以“=0”结束</strong><br>C. 纯虚函数是给出的实现版本的（即无函数体的）的虚函数<br>D. 含有纯虚函数的一定是派生类</p>
+<p>4.下列哪一个是析构函数的特征<br>A. 析构函数的定义只能在类体内<br><strong>B. 一个类中只能定义一个析构函数</strong><br>C. 析构函数名和类名不同<br>D. 析构函数可以有一个或者多个参数</p>
+<p>5.若二叉树中有n个度为2的结点，则该二叉树中的叶子结点数为<br><strong>n+1</strong></p>
+<p>二.简答题</p>
+<p>1.static有什么用途<br><strong>1，在编译多个文件的时候，所有未加static前缀的全局变量和函数都具有全局可见性<br>2，存储在静态数据区的变量会在程序刚开始运行的时候就完成初始化，也是唯一一次初始化<br>3，在静态数据区，内存中所有字节默认值都是0x00</strong></p>
+<p>2.do while和while do有什么区别<br><strong>先执行再判断和先判断再执行的区别</strong></p>
+<p>3.重载和重写的区别<br><strong>重载是函数名相同，参数列表不同。重载只是在类的内部存在，但是不能靠返回类型来判断。<br>重写又称为覆盖，子类重新定义父类中有相同名称和参数的虚函数。函数特征相同但是具体的实现不同，主要出现在继承关系中。<br>重定义，子类重新定义父类中有相同名称的非虚函数<br>被重写的函数不能是static的，必须是virtual的<br>重写函数必须有相同的类型，名称和参数列表<br>重写函数的访问修饰符可以不同，
+</strong></p>
+<p>4.简述C++中的4类类型转换方式<br><strong>static_cast,是最常用的类型转换符，正常类型下的类型转换，int-float——f=static_cast<float>(i);<br>const_cast,把const类型的指针转变为非const类型的指针<br>dynamic_cast,用于运行的时候检查是否类型安全，但只在多态类型时合法，即该类至少有一个虚拟方法<br>reinterpret_cast为数据的二进制重新解释</float></strong></p>
+<p>五.编程题<br>1.用宏定义写swap（x,y）<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define swap<span class="list">(<span class="keyword">x</span>,y)</span> <span class="list">(<span class="keyword">x=</span><span class="list">(<span class="keyword">x</span>)</span>+<span class="list">(<span class="keyword">y</span>)</span>,y=<span class="list">(<span class="keyword">x</span>)</span>-<span class="list">(<span class="keyword">y</span>)</span>,x=<span class="list">(<span class="keyword">x</span>)</span>-<span class="list">(<span class="keyword">y</span>)</span>)</span></span><br></pre></td></tr></table></figure></p>
+<p>2.使用递归实现回文判断<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">char</span> str[], size_t n)</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">      <span class="keyword">if</span> (n&lt;=<span class="number">1</span>)  </span><br><span class="line">      &#123;  </span><br><span class="line">         <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">      &#125;  </span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (str[<span class="number">0</span>]==str[n-<span class="number">1</span>])  </span><br><span class="line">    &#123;  </span><br><span class="line">         <span class="keyword">return</span> isPalindrome(str+<span class="number">1</span>,n-<span class="number">2</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">     <span class="keyword">else</span>  </span><br><span class="line">         <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
+<ul>
+<li>]]>
+    
+    </summary>
+    
+      <category term="海康威视 校园招聘 笔试" scheme="http://zhuxiangzhi.com/tags/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86-%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98-%E7%AC%94%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[海康威视2016年校园招聘笔试题目（A卷）]]></title>
@@ -775,37 +811,6 @@
     </summary>
     
       <category term="C/C++ 单链表 字符串 操作" scheme="http://zhuxiangzhi.com/tags/C-C-%E5%8D%95%E9%93%BE%E8%A1%A8-%E5%AD%97%E7%AC%A6%E4%B8%B2-%E6%93%8D%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[二维数组学习笔记]]></title>
-    <link href="http://zhuxiangzhi.com/2015/12/14/TwoDimArray/"/>
-    <id>http://zhuxiangzhi.com/2015/12/14/TwoDimArray/</id>
-    <published>2015-12-14T09:32:14.000Z</published>
-    <updated>2015-12-30T09:20:33.944Z</updated>
-    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
-<ul>
-<li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><br><strong>二维数组的定义</strong>，百科上讲以数组作为数组元素的数组，虽然拗口，但确实如此，以数组作为另一维度数组的元素。</the></li>
-</ul>
-<p><strong>二维数组的下标</strong>，二维数组在两个方向上“前进”，因此有两个下标，比如：int a[4][1]代表四行四列的int类型的数组两个维度下标的范围为0-3。</p>
-<p><strong>二维数组的初始化</strong>，可以是连续的，也可以分行初始化：<br><code>int a[4][4]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};</code><br>不知道为什么大括号大括号非连续的，在hexo博客中不支持,暂且不写。<br>每个元素都为int类型因此在32位操作系统下各占4个字节。</p>
-<p><strong>二维数组的指针:</strong><br>int (<em>p)[4]=a; 指针</em>p指向a的一维数组:<br>比如 <em>p是a[0][0]的地址
-</em>p+2是a[0][2]的地址<br>以此类推 <em>p+i是a[0][i]的地址。<br>相应的（</em>p+1）是a[1][0]的地址<br>(<em>p+1)+i是a[1][i]的地址<br>(</em>p+j)+i是a[j][i]的地址。</p>
-<p><strong>二维数组的查找:</strong><br>仍旧以上述a[4][4]为例，查找这个数组中是否存在10这个数字，如果存在返回其下标的值，如果不存在给出提示，并判断该数组中有几10这个数字。<br>正常情况下，我们会这样做：<br>    <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">	<span class="keyword">clock_t</span> starttime=clock();  </span><br><span class="line">	<span class="keyword">int</span> i,j;  </span><br><span class="line">	<span class="keyword">int</span> numFind=<span class="number">10</span>;  </span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">4</span>][<span class="number">7</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>&#125;;  </span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)  </span><br><span class="line">	&#123;  </span><br><span class="line">		<span class="keyword">for</span> (j=<span class="number">0</span>;j&lt;<span class="number">4</span>;j++)  </span><br><span class="line">		&#123;  </span><br><span class="line">			<span class="keyword">if</span> (a[i][j]==numFind)  </span><br><span class="line">			&#123;  </span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"待查找的值在二维数组中的第："</span>&lt;&lt;i+<span class="number">1</span>&lt;&lt;<span class="string">"行第"</span>&lt;&lt;j+<span class="number">1</span>&lt;&lt;<span class="string">"列。"</span>&lt;&lt;endl;  </span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">clock_t</span> endtime=clock();  </span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="keyword">static_cast</span>&lt;<span class="keyword">double</span>&gt;(endtime-starttime)/CLOCKS_PER_SEC*<span class="number">1000</span>&lt;&lt;<span class="string">"ms"</span>&lt;&lt;endl;  </span><br><span class="line">	getchar();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找1.jpg" alt="正常查找"><br>这样可以求得待查找的下标值，程运行时间为8ms。</p>
-<p>但是通过观察可以得知，每一行的后一个数要大于前一个数，下一个数要大于上一个数，在《剑指offer》一书中，作者给出以下做法：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组.jpg" alt="二维数组"><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找2.jpg" alt="二维数组查找剑指"><br>在这里由于数组行和列较少，我把while循环换成一个套嵌的for循环：<br>    <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">	<span class="keyword">clock_t</span> starttime=clock();  </span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">4</span>][<span class="number">11</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>&#125;;  </span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;  </span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">3</span>;  </span><br><span class="line">	<span class="keyword">int</span> numFind=<span class="number">10</span>;  </span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)  </span><br><span class="line">	&#123;  </span><br><span class="line">		<span class="keyword">for</span> (j=<span class="number">3</span>;j&gt;<span class="number">0</span>;j--)  </span><br><span class="line">		&#123;  </span><br><span class="line">			<span class="keyword">if</span> (a[i][j]==numFind)  </span><br><span class="line">			&#123;  </span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"待查找的数在：第"</span>&lt;&lt;i+<span class="number">1</span>&lt;&lt;<span class="string">"行，第:"</span>&lt;&lt;j+<span class="number">1</span>&lt;&lt;<span class="string">"列"</span>&lt;&lt;endl;  </span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;  </span><br><span class="line">	&#125;  </span><br><span class="line">	<span class="keyword">clock_t</span> endtime=clock();  </span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="keyword">static_cast</span>&lt;<span class="keyword">double</span>&gt;(endtime-starttime)/CLOCKS_PER_SEC*<span class="number">1000</span>&lt;&lt;<span class="string">"ms"</span>&lt;&lt;endl;  </span><br><span class="line">	getchar();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这样可以求得待查找的下标值，程运行时间为6ms,比直接查找要少了2ms。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/二维数组查找.jpg" alt="第二次查找"></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
-<ul>
-<li>]]>
-    
-    </summary>
-    
-      <category term="C/C++ 二维数组 查找" scheme="http://zhuxiangzhi.com/tags/C-C-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84-%E6%9F%A5%E6%89%BE/"/>
     
   </entry>
   
