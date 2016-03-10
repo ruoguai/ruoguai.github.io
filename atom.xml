@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2016-03-03T11:56:17.842Z</updated>
+  <updated>2016-03-10T12:19:49.328Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -13,6 +13,68 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[海康威视2016年校园招聘笔试题目（A卷）]]></title>
+    <link href="http://zhuxiangzhi.com/2016/03/10/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%862016%E5%B9%B4%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E7%AC%94%E8%AF%95%E9%A2%98%E7%9B%AE%EF%BC%88A%E5%8D%B7%EF%BC%89/"/>
+    <id>http://zhuxiangzhi.com/2016/03/10/海康威视2016年校园招聘笔试题目（A卷）/</id>
+    <published>2016-03-10T11:54:27.000Z</published>
+    <updated>2016-03-10T12:19:49.328Z</updated>
+    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>一.选择题<br>1.下面程序的运行结果是<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span><br><span class="line"></span>&#123;  </span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">"%s %5.3s"</span>,<span class="string">"computer"</span>,<span class="string">"computer"</span>);  </span><br><span class="line">       retrun <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</the></li>
+</ul>
+<p><strong>computer com</strong></p>
+<p>2.设有语句 char a=’\72’;则变量a 包含几个字符<br><strong>答：1个，用char表示的就是一个字符</strong></p>
+<p>3.若已定义int a[9] ,p*=a;并在以后的语句中为改变P的值，不能表示a[1]的是<br>A. ++p<br>B. a+1<br>C. p+1</p>
+<p><strong>D. a++</strong></p>
+<p>4.模板函数和函数模板的区别（可以类推函数指针和指针函数、数组指针和指针数组、类模板和模板类、）<br>模板函数表示由模板生成的函数。函数模板表示的是一个模板，用来产生函数。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">template &lt;typename <span class="constant">T</span>&gt;</span><br><span class="line">void <span class="function"><span class="keyword">fun</span>(<span class="title">T</span></span> a)</span><br><span class="line">&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>函数指针是一个指针，指向一个函数<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int <span class="list">(<span class="keyword">*f</span>)</span><span class="list">()</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>指针函数是一个函数，返回值是指针<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int* <span class="function"><span class="title">fun</span><span class="params">()</span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>数组指针是一个指针，指向一个数组<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> (*a)[<span class="number">8</span>];</span><br></pre></td></tr></table></figure></p>
+<p>指针数组是一个数组，他的元素都是指针<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* a[<span class="number">8</span>];</span><br></pre></td></tr></table></figure></p>
+<p>二.判断题</p>
+<ol>
+<li><p>如果A类是B类的子类，则A类必然使用于B类 <strong> √</strong></p>
+</li>
+<li><p>单继承情况下，派生类中对基类成员的访问也会产生多态性<strong> ×</strong></p>
+</li>
+<li><p>内存释放的原则是谁申请谁释放 <strong>×</strong></p>
+</li>
+<li><p>预处理是在编译之后，链接之前 <strong>×</strong></p>
+</li>
+<li><p>条件语句不能作为多路分支语句 <strong>×</strong></p>
+</li>
+</ol>
+<p>三.填空题</p>
+<p>1.在32位windows操作系统下<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[]=<span class="string">"Hello"</span>; <span class="keyword">sizeof</span>(str)=<span class="number">6</span>  </span><br><span class="line"><span class="keyword">char</span>* p=str; <span class="keyword">sizeof</span>(p)=<span class="number">4</span>  </span><br><span class="line"><span class="keyword">int</span> n=<span class="number">10</span>; <span class="keyword">sizeof</span>(n)=<span class="number">4</span>  </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Func</span><span class="params">(<span class="keyword">char</span> str[<span class="number">100</span>])</span> <span class="title">sizeof</span><span class="params">(str)</span></span>=<span class="number">4</span>  </span><br><span class="line"><span class="keyword">void</span>* p=<span class="built_in">malloc</span>(<span class="number">100</span>);<span class="keyword">sizeof</span>(p)=<span class="number">4</span></span><br></pre></td></tr></table></figure></p>
+<p>2.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a =<span class="number">2</span>;  </span><br><span class="line"><span class="keyword">int</span> b=<span class="number">3</span>;  </span><br><span class="line"><span class="keyword">int</span> c=<span class="number">2</span>;  </span><br><span class="line">  </span><br><span class="line">a+=b*=(++b-c++)=<span class="number">10</span>;</span><br></pre></td></tr></table></figure></p>
+<p><strong>a=10;b=4;c=2;</strong></p>
+<p>3.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line">main()   </span><br><span class="line">&#123;  </span><br><span class="line">     <span class="keyword">char</span> x=(<span class="keyword">char</span>)<span class="number">0xFF</span>;  </span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,x--);  </span><br><span class="line">｝</span><br></pre></td></tr></table></figure></p>
+<p><strong>输出结果为-1；<br>0xFF是十六进制数，在内存中存放是二进制的11111111，而变量x是有符号的，也就是11111111是有符号数，最高位1是符号位代表是负数，按照补码形式转换成其原码，也就是将11111111末位减1之后按位取反，即为00000001，也就是1，最后再加上负号则为-1。</strong></p>
+<p>四.简答题</p>
+<p>1.头文件中ifdef/define/endif的作用是：<strong>防止头文件被重复包含</strong></p>
+<p>2.const和static分别有什么作用：<strong>const是只读的意思，只在声明中使用。static一般有两个作用，规定作用域和存储方式。对于局部变量static规定其为静态存储方式，每次调用的初始值，调用结束后的存储空间不释放。</strong></p>
+<p>3.c++调用c之后要加extern c：<strong>C++面向对象，C面向过程。C++支持重载，C不支持。在c中编译函数如fun(int a,int b)编译之后出现fun()，而在c++中则会出现_fun()_int_int之类的。所以要加extern C。表明声明的变量和函数可以在模块中使用。</strong></p>
+<p>4.C和C++的内存的分配方式：<br><strong>C分为静态分配和动态分配，静态分配是指编译器在处理源代码时分配，动态分配是指程序执行时调用malloc进行分配。<br>C++：静态存储区，静态分配在编译的时候已经分配好，并且在程序的整个运行过程中都是存在的。<br>栈分配区：相关代码执行时创建，在执行结束后自动释放，局部变量存储在这里面<br>堆分配区：动态分配内存，使用new malloc等完成分配。</strong></p>
+<p>5.A. C语言函数 B. C语言操作符 C. C++函数 D. C++操作符 E.在堆中分配内存 F.在栈中分配内存 G. 调用构造函数 H. 不调用构造函数 I.free J. delete</p>
+<p><strong>malloc（A,C,E,H,I），new（D,E,G,J）</strong></p>
+<p>五.编程题<br>1.编写strcpy函数，已知其原型为：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">strcpy</span><span class="params">(<span class="keyword">char</span>* <span class="built_in">strcpy</span>,<span class="keyword">const</span> <span class="keyword">char</span>* strSrc)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* strcpy(<span class="keyword">char</span>* strDest,<span class="keyword">const</span> <span class="keyword">char</span>* strSrc)  </span><br><span class="line">&#123;  </span><br><span class="line">      <span class="keyword">assert</span>((strDest!=<span class="keyword">null</span>)&amp;&amp;(strSrc!=<span class="keyword">null</span>));  </span><br><span class="line">      <span class="keyword">if</span>(strDest==strSrc)  </span><br><span class="line">            <span class="keyword">return</span> strDest;  </span><br><span class="line">      <span class="keyword">char</span>* address=strDest;  </span><br><span class="line">      <span class="keyword">while</span>((*strDest++=*strSrc++)!=<span class="string">'\0'</span>)  </span><br><span class="line">       <span class="keyword">return</span> address;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.编写string的构造函数、拷贝构造函数、析构函数和赋值函数<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//普通构造函数  </span></span><br><span class="line">String::String(<span class="keyword">const</span> <span class="keyword">char</span>*str)  </span><br><span class="line">&#123;  </span><br><span class="line">     <span class="keyword">if</span>(str==<span class="literal">NULL</span>)  </span><br><span class="line">     m_data=<span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1</span>];  </span><br><span class="line">     *m_data=<span class="string">'\0'</span>;  </span><br><span class="line">     <span class="keyword">else</span>  </span><br><span class="line">       </span><br><span class="line">          &#123;  </span><br><span class="line">                <span class="keyword">int</span> length=<span class="built_in">strlen</span>(str);  </span><br><span class="line">                m_data=<span class="keyword">new</span> <span class="keyword">char</span>[length+<span class="number">1</span>];  </span><br><span class="line">                <span class="built_in">strcpy</span>(m_data,str);    </span><br><span class="line">           &#125;  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line"><span class="comment">//拷贝构造函数  </span></span><br><span class="line">String::String(<span class="keyword">const</span> <span class="built_in">string</span> &amp;other)  </span><br><span class="line">&#123;  </span><br><span class="line">      <span class="keyword">int</span> length=<span class="built_in">strlen</span>(str);  </span><br><span class="line">      m_data=<span class="keyword">new</span> <span class="keyword">char</span>[length+<span class="number">1</span>];  </span><br><span class="line">      <span class="built_in">strcpy</span>(m_data,other.data);  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line"><span class="comment">//析构函数  </span></span><br><span class="line">String::~String(<span class="keyword">void</span>)  </span><br><span class="line">  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">delete</span> [] m_data;  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line"><span class="comment">//赋值函数  </span></span><br><span class="line">String&amp; <span class="built_in">string</span>：：operate=（<span class="keyword">const</span> <span class="built_in">string</span> &amp;other）  </span><br><span class="line">&#123;  </span><br><span class="line">       <span class="keyword">if</span>(<span class="keyword">this</span>=&amp;other)  </span><br><span class="line">          retrun *<span class="keyword">this</span>;  </span><br><span class="line">       <span class="keyword">delete</span> [] m_data;  </span><br><span class="line">       <span class="keyword">int</span> length=<span class="built_in">strlen</span>(other.data);  </span><br><span class="line">       m_data=<span class="keyword">new</span> <span class="keyword">char</span>[length+<span class="number">1</span>];  </span><br><span class="line">       <span class="built_in">strcpy</span>(m_data,other.m_data);  </span><br><span class="line">       retrun *<span class="keyword">this</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
+<ul>
+<li>]]>
+    
+    </summary>
+    
+      <category term="海康威视 校园招聘 笔试" scheme="http://zhuxiangzhi.com/tags/%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86-%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98-%E7%AC%94%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[恒生电子2016年校园招聘笔试题目（C/C++部分）（B卷）]]></title>
@@ -744,270 +806,6 @@
     </summary>
     
       <category term="C/C++ 二维数组 查找" scheme="http://zhuxiangzhi.com/tags/C-C-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84-%E6%9F%A5%E6%89%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Socket编程学习笔记]]></title>
-    <link href="http://zhuxiangzhi.com/2015/12/12/Socket%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://zhuxiangzhi.com/2015/12/12/Socket编程学习笔记/</id>
-    <published>2015-12-12T03:03:03.000Z</published>
-    <updated>2015-12-30T09:20:43.286Z</updated>
-    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
-<ul>
-<li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><br>Socket编程是应用于网络程序的，因此必然少不了学习网络协议的相关知识，回头翻翻书，把OSI七层参考模型和TCP/IP协议画图如下简单理解一下。</the></li>
-</ul>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/OSI%E4%B8%83%E5%B1%82%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.jpg" alt="OSI和TCP/IP协议"></p>
-<p>  在简单的了解回顾之后发现，这种常识性的东西，经过多次的重复记忆，是不太容易忘记了。记得有笔试或面试中问路由协议是在哪一层，当时是回答错了的，在<strong>网络层</strong>。</p>
-<p>  <strong>而socket编程主要是针对TCP和UDP协议的，这两个协议在OSI的传输层在TCP/IP四层的传输层。</strong></p>
-<p>  还有<strong>数据封装</strong>的定义：对等协议之间交换信息单元被称为协议数据单元（PDU，Protocol Data Unit），在OSI参考模型中，下层把上层的PDU作为本层的数据封装，然后加入本层的头部。<br><strong>套接字的类型</strong></p>
-<ol>
-<li>流式套接字（<code>SOCKET_STREAM</code>）<br>提供面向连接、可靠的数据传输服务，数据无差错、无重复的发送且按发送顺序接收，是基于TCP协议实现的。</li>
-<li>数据报式套接字（<code>SOCK_DGRAM</code>）<br>提供面向无连接、不可靠的传输服务，数据报以独立包形式发送，不提供无错保证，数据可能丢失和重复，并且接收顺序混乱，数据报式套接字是基于UDP协议实现的。</li>
-<li>原始套接字（<code>SOCK_RAW</code>）</li>
-</ol>
-<p>在socket编程中使用的函数主要有以下几个：</p>
-<ol>
-<li><p>WSAStartup，<strong>实现加载套接字库，进行套接字库的版本协商，确定将要使用的Socket版本</strong>。 函数原型 </p>
-<p><code>int WSAStartup(WORD wVersionRequested,LPWSADATA lpWSAData);</code></p>
-</li>
-<li><p>socket函数 <strong>新建套接字</strong> 函数原型 </p>
-</li>
-</ol>
-<pre><code>SOCKET socket(int af,int type,intprotocol)；
-</code></pre><ol>
-<li><p>bind函数 <strong>将套接字绑定到本地的地址和端口上</strong>函数原型<br><code>int bind(SOCKET s,const struct sockaddr FAR *name,int namelen);</code></p>
-</li>
-<li><p>listen函数 <strong>监听模式</strong>函数原型：<br><code>int listen(SOCKET s,int backlog);</code><br>监听模式，第二个参数是等待连接队列的最大长度。</p>
-</li>
-<li><p>accept函数，<strong>接收客户端发送的连接请求</strong></p>
-<p><code>SOCKET accept(
-SOCKET s,
-Struct sockaddr FAR* addr,
-Int FAR* addrlen);</code></p>
-</li>
-<li><p>send函数，<strong>通过一个已建立连接的套接字发送数据</strong></p>
-<p><code>SOCKET send(
-SOCKET s,、
-Const char FAR* buf,
-Int len,
-Int flags
-);</code></p>
-</li>
-<li><p>recv函数，<strong>通过一个已建立连接接收数据数据</strong></p>
-<p><code>SOCKET recv(
-SOCKET s,
-Const char FAR* buf,
-Int len,
-Int flags
-);</code></p>
-</li>
-<li><p>connect函数，<strong>将一个特定的套接字建立连接</strong></p>
-<p><code>Int connect(
-SOCKET s,
-Const struct sockaddr FAR* name,
-Int namelen,
-);</code><br>还有Recvfrom函数<br>Sendto函数<br>Htons函数和htonl函数等几个函数。</p>
-</li>
-</ol>
-<p>下面一例程是对Socket编程用于TCP通信的实践，该例程作者：<strong>集优</strong> 例程比较翔实，诸位可以用来参考。<br>原文地址：<a href="%E9%9B%86%E4%BC%98%E7%9A%84%E4%BE%8B%E7%A8%8B">http://jingyan.baidu.com/article/676629974557c254d51b84da.html</a><br>建工程和控件的设置不再赘述，其中事件显示EDIT编辑框记得设置：<br>Multiline和Vertical Scroll为True，这样编辑框中可以显示多行，且在竖直方向上可以有滚动条。</p>
-<p>在类视图中添加一个派生于CSocket的类CSocketServer类，并使用类向导添加三个函数：<code>OnAccept();OnClose();OnReceive();</code><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E7%B1%BB%E5%90%91%E5%AF%BC%E6%B7%BB%E5%8A%A0%E5%87%BD%E6%95%B0.jpg" alt="类向导添加函数"><br>在SocketServer的头文件中包含对话框的头文件，并添加class类</p>
-<pre><code>#include &quot;Server.h&quot;
-class CServerDlg;
-</code></pre><p>添加一个指向对话框的指针，如下图所示：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E5%AF%B9%E8%AF%9D%E6%A1%86%E7%9A%84%E5%8C%85%E5%90%AB.jpg" alt="指针指向对话框"><br>对刚才类向导中添加的三个函数进行修改，实现功能</p>
-<pre><code>void CServerSocket::OnAccept(int nErrorCode)
-{
-    m_pdlg-&gt;AddClient();
-    CSocket::OnAccept(nErrorCode);
-}
-void CServerSocket::OnClose(int nErrorCode)
-{
-    m_pdlg-&gt;RemoveClient(this);
-    CSocket::OnClose(nErrorCode);
-}
-void CServerSocket::OnReceive(int nErrorCode)
-{
-    m_pdlg-&gt;RecvData(this);
-    CSocket::OnReceive(nErrorCode);
-}
-</code></pre><p>这三个m_pdlg-&gt;指向的都是在对话框中定义的函数。</p>
-<p>在对话框头文件中包含SockeSever类的头文件等<br>为对话框类添加相应的函数和变量，然后实现这些函数的功能</p>
-<pre><code>//定义函数和变量
-CServerSocket* listenSocket;//监听状态，用于打开服务器
-CPtrList m_clientList;//定义一个链表，用来存储用户
-bool m_connect;
-void AddClient();
-void RemoveClient(CServerSocket* pSocket);
-void RecvData(CServerSocket* pSocket);
-void UpdataEvent(CString str);
-BOOL Char2Byte(LPCWSTR strBuff,LPSTR destBuff,int nlen);
-void sendMSG(CString str);
-void ControlPC(CString AndroidControl);
-</code></pre><p><strong>添加客户端</strong></p>
-<pre><code> void CServerDlg::AddClient()
-{
- CServerSocket* pSocket=new CServerSocket;
- pSocket-&gt;m_pdlg=this;
- listenSocket-&gt;Accept(*pSocket);
- pSocket-&gt;AsyncSelect(FD_READ|FD_WRITE|FD_CLOSE);
- m_clientList.AddTail(pSocket);//在链表的末端添加一个元素     或者将另外一个链表直接插入到这个链表的末尾
- m_user=m_clientList.GetCount();//GetCount返回这个链表中元     素的个数
- UpdateData(false);
- UpdataEvent(_T(&quot;用户连接服务器&quot;));
- sendMSG(_T(&quot;你好&quot;));
- }
-</code></pre><p><strong>移除客户端</strong></p>
-<pre><code>void CServerDlg::RemoveClient(CServerSocket* pSocket)
-   {
-   POSITION nPos=m_clientList.GetHeadPosition();//返回链表标元素的位置
-   POSITION nTempPos=nPos;//中间变量
-   while (nPos)
-   {
-       CServerSocket* pSockItem=(CServerSocket*)m_clientList.GetNext(nPos);
-       if (pSockItem-&gt;m_hSocket==pSocket-&gt;m_hSocket)
-       {
-           pSockItem-&gt;Close();
-           delete pSockItem;
-           m_clientList.RemoveAt(nTempPos);
-           m_user=m_clientList.GetCount();
-           UpdateData(false);
-           UpdataEvent(_T(&quot;用户离开&quot;));
-           return;
-       }
-       nTempPos=nPos;
-   }
-   }
-</code></pre><p><strong>接收数据</strong></p>
-<pre><code>void CServerDlg::RecvData(CServerSocket* pSocket)
-{
-    //分配内存
-    char* pData=NULL;
-    pData=new char[1024];
-    memset(pData,0,sizeof(char)*1024);
-    UCHAR leng=0;
-    CString str;
-    if (pSocket-&gt;Receive(pData,1024,0)!=SOCKET_ERROR)
-    {
-        str=pData;
-        ControlPC(str);
-        sendMSG(str);
-    }
-    delete pData;
-    pData=NULL;
-}
-</code></pre><p><strong>事件日志</strong></p>
-<pre><code>void CServerDlg::UpdataEvent(CString str)
-{
-    CString string;
-    CTime time=CTime::GetCurrentTime();
-    str+=_T(&quot;\r\n&quot;);
-    string = time.Format(_T(&quot;%Y/%m/%d %H:%M:%S  &quot;)) + str;
-    int lastLine = m_event.LineIndex(m_event.GetLineCount() - 1);
-    m_event.SetSel(lastLine+1,lastLine+2,0);
-    m_event.ReplaceSel(string);
-
-}
-</code></pre><p><strong>字符串转比特数</strong></p>
-<pre><code>BOOL CServerDlg::Char2Byte(LPCWSTR strBuff,LPSTR destBuff,int nlen)
-{
-    int n = 0;
-    n = WideCharToMultiByte(CP_OEMCP, 0, strBuff, -1, destBuff, 0, 0, FALSE);//映射一unicode字符串到多字节字符串
-    if (n&lt;nlen)
-    return FALSE;
-    WideCharToMultiByte(CP_OEMCP, 0, strBuff, -1, destBuff, nlen, 0, FALSE);
-    return TRUE;
-}
-</code></pre><p><strong>发送消息</strong></p>
-<pre><code>void CServerDlg::sendMSG(CString str)
-{
-    char *pSend = new char[str.GetLength()];
-    memset(pSend, 0, str.GetLength()*sizeof(char));
-    if (!Char2Byte(str.GetBuffer(0), pSend, str.GetLength()))
-    {
-        AfxMessageBox(_T(&quot;字符转换失败&quot;));
-        delete pSend;
-        return;
-    }
-    POSITION nPos = m_clientList.GetHeadPosition();
-    while (nPos)
-    {
-        CServerSocket* pTemp = (CServerSocket*)m_clientList.GetNext(nPos);
-        pTemp-&gt;Send(pSend, str.GetLength());
-    }
-    delete pSend;
-}
-</code></pre><p><strong>控制电脑</strong></p>
-<pre><code>void CServerDlg::ControlPC(CString AndroidControl)
-{
-    if (AndroidControl == &quot;mop&quot;)
-    {
-        ShellExecute(NULL, _T(&quot;open&quot;), _T(&quot;C:\\Program Files (x86)\\KuGou\\KGMusic\\KuGou.exe&quot;), NULL, NULL, SW_SHOWNORMAL);
-    }
-    else if (AndroidControl == &quot;mcl&quot;)
-    {
-        DWORD id_num;
-        HWND hWnd = ::FindWindow(_T(&quot;kugou_ui&quot;), NULL);
-        GetWindowThreadProcessId(hWnd, &amp;id_num);          
-        //注意：第二个参数是进程的ID，返回值是线程的ID。
-        HANDLE hd = OpenProcess(PROCESS_ALL_ACCESS, FALSE, id_num);
-        TerminateProcess(hd, 0);
-    }
-    else if (AndroidControl == &quot;mpl&quot; || AndroidControl == &quot;mpa&quot;)                //播放/暂停
-    {
-        keybd_event(VK_LMENU, 0, 0, 0);
-        keybd_event(VK_F5, 0, 0, 0);
-        keybd_event(VK_F5, 0, KEYEVENTF_KEYUP, 0);
-        keybd_event(VK_LMENU, 0, KEYEVENTF_KEYUP, 0);
-    }
-}
-</code></pre><p><strong>防止按下ENTER或者ESC按键时退出</strong>   </p>
-<pre><code>BOOL CServerDlg::PreTranslateMessage(MSG* pMsg)
-{
-    switch (pMsg-&gt;wParam)
-    {
-    case VK_RETURN:
-    case VK_ESCAPE:
-        return true; break;
-    }
-    return CDialogEx::PreTranslateMessage(pMsg);
-}
-</code></pre><p><strong>事件响应</strong></p>
-<pre><code>void CServerDlg::OnBnClickedStartserver()
-{
-    if (m_connect)
-    {
-        delete listenSocket;
-        listenSocket=NULL;
-        m_connect=false;
-        SetDlgItemText(IDC_STARTSERVER,_T(&quot;打开服务器&quot;));
-        UpdataEvent(_T(&quot;系统关闭服务器&quot;));
-        return;
-    }
-    listenSocket=new CServerSocket;
-    listenSocket-&gt;m_pdlg=this;
-    //指定对话框为主对话框
-    if (!listenSocket-&gt;Create(m_port))
-    {
-        AfxMessageBox(_T(&quot;坚挺失败!&quot;));
-        listenSocket-&gt;Close();
-        return;
-    }
-    m_connect=true;
-    SetDlgItemText(IDC_STARTSERVER,_T(&quot;关闭服务器&quot;));
-    UpdataEvent(_T(&quot;系统打开服务器!&quot;));
-
-}
-</code></pre><p>至此，客户端代码的编写完成。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF.jpg" alt="服务器端"></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><Excerpt in index | 首页摘要><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
-<ul>
-<li>]]>
-    
-    </summary>
-    
-      <category term="编程 C/C++ Socket" scheme="http://zhuxiangzhi.com/tags/%E7%BC%96%E7%A8%8B-C-C-Socket/"/>
     
   </entry>
   
