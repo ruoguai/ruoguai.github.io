@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>代码完整性之实现幂运算 | 朱襄之</title>
+  <title>新火试新茶 | 朱襄之</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代码完整性之实现幂运算">
-<meta property="og:url" content="http://zhuxiangzhi.com/2016/01/04/代码完整性之实现幂运算/index.html">
+<meta property="og:title" content="新火试新茶">
+<meta property="og:url" content="http://zhuxiangzhi.com/2016/04/24/新火试新茶/index.html">
 <meta property="og:site_name" content="朱襄之">
 <meta property="og:description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
-<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/%E4%BB%A3%E7%A0%81%E5%AE%8C%E6%95%B4%E6%80%A7%E4%BB%A3%E7%A0%81%E5%AE%8C%E6%95%B4%E6%80%A7.jpg">
-<meta property="og:updated_time" content="2016-01-04T06:37:11.413Z">
+<meta property="og:updated_time" content="2016-04-24T13:13:24.954Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="代码完整性之实现幂运算">
+<meta name="twitter:title" content="新火试新茶">
 <meta name="twitter:description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
   
     <link rel="alternative" href="/atom.xml" title="朱襄之" type="application/atom+xml">
@@ -195,11 +194,11 @@ var _hmt = _hmt || [];
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-代码完整性之实现幂运算" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-新火试新茶" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/04/代码完整性之实现幂运算/" class="article-date">
-  	<time datetime="2016-01-04T06:24:29.000Z" itemprop="datePublished">2016-01-04</time>
+      <a href="/2016/04/24/新火试新茶/" class="article-date">
+  	<time datetime="2016-04-24T13:12:16.000Z" itemprop="datePublished">2016-04-24</time>
 </a>
     </div>
   
@@ -212,7 +211,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      代码完整性之实现幂运算
+      新火试新茶
     </h1>
   
 
@@ -223,7 +222,7 @@ var _hmt = _hmt || [];
 
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C-编程-幂运算/">C/C++ 编程 幂运算</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习-拓展训练-感悟/">学习 拓展训练 感悟</a></li></ul>
 	</div>
 
         <div class="clearfix"></div>
@@ -233,18 +232,24 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
+        <p><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
 <ul>
 <li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><br><strong>我们可以通过三种方式来获取错误信息：</strong></the></li>
+<the rest="" of="" contents="" |="" 余下全文=""><blockquote>
+<p>《望江南.超然台作》<br>春未老，风细柳斜斜。试上超然台上望，半壕春水一城花。烟雨暗千家。<br>寒食后，酒醒却咨嗟。休对故人思故国，且将新火试新茶。诗酒趁年华。</p>
+</blockquote>
+</the></li>
 </ul>
-<ol>
-<li>通过函数的返回值来判断，例如经常在程序中见到的return 0，return 1 等。在windows很多API的return 0 表示调用成功。但是使用起来很不方便，函数不能直接把计算结果表示返回值赋值给其他变量，也不能将结果传递给其他函数。</li>
-<li>设置一个全局变量，这样就可以把返回值赋值给其他变量或者传递给其他函数。</li>
-<li>第三种方式是抛出异常，可以根据不同的出错原因定义不同的异常类型。</li>
-</ol>
-<p>以幂运算函数的实现为例，代码如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实现函数库中pow函数，需要考虑幂为0和为负的情况</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;conio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">FunPow</span><span class="params">(<span class="keyword">double</span> di, <span class="keyword">int</span> mi)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"**********************************************"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"***         本程序实现幂次运算             ***"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"*** 主要是考虑代码的完整性和时间复杂度问题 ***"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"***         考虑0的0次幂问题               ***"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"***        要考虑幂次的正负问题            ***"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"***         www.zhuxiangzhi.com            ***"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"**********************************************"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">double</span> di1,result1;</span><br><span class="line">		<span class="keyword">int</span> mi1;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"请输入底:"</span>&lt;&lt;endl;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;di1;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"请输入幂:"</span>&lt;&lt;endl;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;mi1;</span><br><span class="line">		<span class="keyword">if</span> (mi1==<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//在对小数进行判断是否为零的时候，不能直接使用==号，如果两个小数的绝对值</span></span><br><span class="line">			<span class="comment">//差很小，例如小于0.000001时，可以认为他们是相等的</span></span><br><span class="line">			<span class="keyword">if</span> (di1==<span class="number">0</span>) </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"0的0次幂没有数学意义"</span>&lt;&lt;endl;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"任意非0数的0次幂都为1"</span>&lt;&lt;endl;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			result1=FunPow(di1,mi1);</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"("</span>&lt;&lt;di1&lt;&lt;<span class="string">")的("</span>&lt;&lt;mi1&lt;&lt;<span class="string">")次幂为:"</span>&lt;&lt;result1&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"按ESC键退出，按ENTER键继续"</span>&lt;&lt;endl;</span><br><span class="line">		ch=getch();<span class="comment">//conio.h</span></span><br><span class="line">		<span class="keyword">if</span> (<span class="number">27</span>==ch)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">FunPow</span><span class="params">(<span class="keyword">double</span> di, <span class="keyword">int</span> mi)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> result=<span class="number">1.0</span>;</span><br><span class="line">		<span class="keyword">if</span> (mi&gt;<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=mi;i++)</span><br><span class="line">			&#123;</span><br><span class="line">				result*=di;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="built_in">abs</span>(mi);i++)</span><br><span class="line">			&#123;</span><br><span class="line">				result*=di;</span><br><span class="line">			&#125;</span><br><span class="line">			result=<span class="number">1</span>/result;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>程序运行结果如下：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E4%BB%A3%E7%A0%81%E5%AE%8C%E6%95%B4%E6%80%A7%E4%BB%A3%E7%A0%81%E5%AE%8C%E6%95%B4%E6%80%A7.jpg" alt=""></p>
+<p>新火试新茶，诗酒趁年华。诚然这首词从东坡的角度看是对故乡的不尽思念以及东坡那性子中特有的超然物外的心态。我从未品尝过新茶的滋味，却也懂得诗酒趁年华，懂得去珍惜每一刻。</p>
+<p>为期两天的户外拓展训练结束了，也是我第一次接受如此正规的素质训练，作为从学生到职场人士的转变，这次拓展也在两者之间撘了架桥，让我学会了许多，懂得了许多，相信在以后的职业生涯中也会给我带来诸多帮助。</p>
+<p>开始的时候是抗拒甚至是抱着无所谓的心态去参与的，认为这样的训练是无关紧要而且浪费时间点。然而从分队、取名、队歌一直到一个个挑战结束到回归到原本的位置，却也难以忘记，难以忘记第一次勇敢的面对前所未有的挑战和恐惧，难以忘记挑战中伙伴伸出的强有力的双手和坚定的眼神，难以忘记每次挑战完成并取得好成绩之后的欢呼，当然也难以忘记不知所以然的冠军从手中无缘无故的掉落。当然，我相信我们还是冠军。</p>
+<p>由于分队的人员无关性，只是缘分让不同部门的伙伴走到了一起，我们伙伴多是来自名校的比我要优秀很多的孩子，所以一开始在写自己的目标的时候，只是简单的写了两个字“学习”，确实在完成每一个挑战的时候我都学习到了很多，在描述自己性格的时候，我画了一柄宝剑，当然不是大保健的宝剑，宝剑意为重剑无锋，大巧不工，我想成为重剑也想拥有重剑大巧不工的性格。</p>
+<p>信任背摔作为常见的训练项目，也是我们的开胃菜，培养了大家相互之间的信任。然而高空单杠着实让我吃惊，如果换做是我一个人，我是没有勇气去挑战这一项目的，内心的恐惧会直接讲我pass掉，但是由于积分政策，不参加就意味着团队分数的扣减。但是当我从七米高的柱子顶部跃起，抓住单杠的那一刻，我的内心的那份激动是无以言表的。在这个挑战中教练传授给了大家诸多经验，然而由于我本身身体平衡性的缺陷，经验竟然在我平衡身体的过程中起了副作用。所以经验于我们来讲会大大提高我们的效率，但是也要结合自身实际来使用。回过头来看，有些感触还是值得记录的：面对难题，敢于克服内心的恐惧（七米高台），敢于面对（攀爬和跳跃），敢于挑战，认准目标（高空杠杆），摒除杂念，就是要干，勇敢越出那一步。</p>
+<p>有轨电车也是常见的项目，然而在完成挑战的过程中一个有趣的现象出现了，九个队伍三三一组，我们前三队同时进行，由于团队风格（稳扎稳打）我们的基调定的非常低，只求过程中不出错，就相对降低了抬脚的频率，也导致了我们是前三队中的倒数第一。结束之后的总结，大家都很气馁，然而从结果来看在前三个队伍中我们是最差的，在九个队伍中我们却是第三名，非常有趣。也就是要感谢我们优秀的对手，他们的优秀也同时造就了我们的优秀，在相互追赶的过程中，总能相互学到很多。</p>
+<p>盲阵这个项目是我们团队输的最惨的项目，当然也有比我们成绩更差的，但是从一开始我们就没有理清自己的思路才会导致成绩落后于优秀的队伍。在接下来的驿站传书、达芬奇密码等脑力项目中，我们团队一直遥遥领先于别的团队，这其中除了方案的制定，更多的是过程中个体的执行力。如果说一个好的目标是成功的基石，执行力才是成功的关键。</p>
+<p>终了，雨中的众志成城项目竟有些伤感，因为这个项目结束之后，大家就该解散，每个人都要回到自己的工作岗位上去了。淅淅沥沥的雨给项目增加了不少的难度，路滑，墙滑，但人心不滑，不再分队伍，所有2016届新人就是一个队伍，为了求生也是为了自己的目标。各自承担相应的职责，最终大家都翻越了那堵不可逾越的墙，看着自己肩头上的各种脚印，想起原来我的肩上也要担起不少，要担起我自己的梦想同时也要担起团队中的那份不可缺失的力量。当然，也感谢那些助我寻找一条道路的伙伴，感谢那些愿意牺牲自己而选择最后一个逃生的人。</p>
+<p>两天，并不算短的时间，学会了许多，也有许多感悟，在此记录。希望学到的这些经验和精神能够用在工作和生活中。</p>
+<p>且将新火试新茶。</p>
 
       
     </div>
@@ -253,13 +258,13 @@ var _hmt = _hmt || [];
   
     
 <div class="copyright">
-  <p><span>本文标题:</span><a href="/2016/01/04/代码完整性之实现幂运算/">代码完整性之实现幂运算</a></p>
+  <p><span>本文标题:</span><a href="/2016/04/24/新火试新茶/">新火试新茶</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zhuxiangzhi 的个人博客">zhuxiangzhi</a></p>
-  <p><span>发布时间:</span>2016年01月04日 - 14时24分</p>
-  <p><span>最后更新:</span>2016年01月04日 - 14时37分</p>
+  <p><span>发布时间:</span>2016年04月24日 - 21时12分</p>
+  <p><span>最后更新:</span>2016年04月24日 - 21时13分</p>
   <p>
-    <span>原始链接:</span><a class="post-url" href="/2016/01/04/代码完整性之实现幂运算/" title="代码完整性之实现幂运算">http://zhuxiangzhi.com/2016/01/04/代码完整性之实现幂运算/</a>
-    <span class="copy-path" data-clipboard-text="原文: http://zhuxiangzhi.com/2016/01/04/代码完整性之实现幂运算/　　作者: zhuxiangzhi" title="点击复制文章链接">
+    <span>原始链接:</span><a class="post-url" href="/2016/04/24/新火试新茶/" title="新火试新茶">http://zhuxiangzhi.com/2016/04/24/新火试新茶/</a>
+    <span class="copy-path" data-clipboard-text="原文: http://zhuxiangzhi.com/2016/04/24/新火试新茶/　　作者: zhuxiangzhi" title="点击复制文章链接">
         <i class="fa fa-clipboard"></i>
     </span>
   </p>
@@ -273,16 +278,10 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <div id="article-nav-newer" class="article-nav-title">
-      <a href="/2016/01/05/再读《射雕英雄传》/">
-        再读《射雕英雄传》
-      </a>
-    </div>
-  
   
     <div id="article-nav-older" class="article-nav-title">
-      <a href="/2016/01/02/感谢你，赠我空欢喜/">
-        Thank you for well noting
+      <a href="/2016/03/16/杭州幂拓科技测试题目/">
+        杭州幂拓科技测试题目
       </a>
     </div>
   
@@ -348,7 +347,7 @@ var _hmt = _hmt || [];
 
   <div class="duoshuo" id="comments">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2016/01/04/代码完整性之实现幂运算/" data-title="代码完整性之实现幂运算" data-url="http://zhuxiangzhi.com/2016/01/04/代码完整性之实现幂运算/"></div>
+	<div class="ds-thread" data-thread-key="2016/04/24/新火试新茶/" data-title="新火试新茶" data-url="http://zhuxiangzhi.com/2016/04/24/新火试新茶/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -384,16 +383,14 @@ var _hmt = _hmt || [];
 
   
   
-    
     <div  class="post-nav-button">
-    <a href="/2016/01/05/再读《射雕英雄传》/" title="上一篇: 再读《射雕英雄传》">
-    <i class="fa fa-angle-left"></i>
-    </a>
-    <a href="/2016/01/02/感谢你，赠我空欢喜/" title="下一篇: Thank you for well noting">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/03/16/杭州幂拓科技测试题目/" title="下一篇: 杭州幂拓科技测试题目">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>
   
+    
 
 
 
