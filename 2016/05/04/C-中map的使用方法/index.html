@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>位运算学习笔记 | 朱襄之</title>
+  <title>C++中map的使用方法 | 朱襄之</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="位运算学习笔记">
-<meta property="og:url" content="http://zhuxiangzhi.com/2015/12/30/位运算学习笔记/index.html">
+<meta property="og:title" content="C++中map的使用方法">
+<meta property="og:url" content="http://zhuxiangzhi.com/2016/05/04/C-中map的使用方法/index.html">
 <meta property="og:site_name" content="朱襄之">
 <meta property="og:description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
-<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/%E4%BD%8D%E8%BF%90%E7%AE%97%E4%BD%8D%E8%BF%90%E7%AE%97%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.jpg">
-<meta property="og:updated_time" content="2015-12-30T09:20:12.027Z">
+<meta property="og:image" content="http://7xp2mn.com1.z0.glb.clouddn.com/map%E8%BD%AC%E6%8D%A2%E9%98%BF%E6%8B%89%E4%BC%AF%E6%95%B0%E5%AD%97.jpg">
+<meta property="og:updated_time" content="2016-05-04T15:14:26.636Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="位运算学习笔记">
+<meta name="twitter:title" content="C++中map的使用方法">
 <meta name="twitter:description" content="技能的储备从点滴开始，多一点记录或许就多一点希望。">
   
     <link rel="alternative" href="/atom.xml" title="朱襄之" type="application/atom+xml">
@@ -195,11 +195,11 @@ var _hmt = _hmt || [];
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-位运算学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-C-中map的使用方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/30/位运算学习笔记/" class="article-date">
-  	<time datetime="2015-12-30T09:02:22.000Z" itemprop="datePublished">2015-12-30</time>
+      <a href="/2016/05/04/C-中map的使用方法/" class="article-date">
+  	<time datetime="2016-05-04T15:13:09.000Z" itemprop="datePublished">2016-05-04</time>
 </a>
     </div>
   
@@ -212,7 +212,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      位运算学习笔记
+      C++中map的使用方法
     </h1>
   
 
@@ -223,7 +223,7 @@ var _hmt = _hmt || [];
 
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C-编程-位运算/">C/C++ 编程 位运算</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-map-数字转汉字/">C++ map 数字转汉字</a></li></ul>
 	</div>
 
         <div class="clearfix"></div>
@@ -233,13 +233,13 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></excerpt></p>
+        <p><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
 <ul>
 <li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><br>EXCEL作为一种常用的办公软件，可谓人人必备。<br>EXCEL的列命名通常以字母形式出现，比如：A代表第1列，B代表第2列。。。。然后Z代表第26列，AA代表27列，AB代表28列依次类推。。。。使用C/C++将字母转化为数字。<br><strong>这个可以以位运算的形式来考虑，通常我们会进行二进制和十进制之间的转换，而列名互换可以看成是十进制和二十六进制之间的转换。</strong><br>下面程序包含了二进制和十进制之间的相互转换以及EXCEL表格中字母列转化为数字列的代码：<br><strong>其中，在EXCEL2010中最多有16384列，也就是说字母最多为3位，即16384对应的列为XFD，在程序中加入判断。</strong><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">b2d</span><span class="params">(<span class="built_in">string</span> nMum)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">excelchar2d</span><span class="params">(<span class="built_in">string</span> nChar)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">d2b</span><span class="params">(<span class="keyword">int</span> nNum)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"********************************************************"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"*******                                         ********"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"*******                                         ********"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"*******   程序实现二进制和十进制之间相互转换    ********"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"*******   程序实现EXCEL列名字母向数字的转换     ********"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"*******                                         ********"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"*******                                         ********"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"*******         www.zhuxiangzhi.com             ********"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"********************************************************"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">string</span> strBinary,excelCols;</span><br><span class="line">	<span class="keyword">int</span> dnum;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"请输入一个二进制数:"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;strBinary;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"转换为十进制为:"</span>;</span><br><span class="line">	b2d(strBinary);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;endl&lt;&lt;<span class="string">"请输入一个十进制数:"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;dnum;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"转换为二进制为:"</span>;</span><br><span class="line">	d2b(dnum);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;endl&lt;&lt;<span class="string">"请输入EXCEL的列名:"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;excelCols;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"转换为数字列为:"</span>;</span><br><span class="line">	excelchar2d(excelCols);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//二进制转换为十进制</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">b2d</span><span class="params">(<span class="built_in">string</span> nMum)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> ssize=nMum.size();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;ssize;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		sum+=(nMum[ssize-i-<span class="number">1</span>]-<span class="number">48</span>)*<span class="built_in">pow</span>(<span class="number">2</span>,i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;sum;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//十进制转换为二进制</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">d2b</span><span class="params">(<span class="keyword">int</span> nNum)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (nNum)</span><br><span class="line">	&#123;</span><br><span class="line">		d2b(nNum/<span class="number">2</span>);</span><br><span class="line">		nNum=nNum%<span class="number">2</span>;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;nNum;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> nNum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//excel字母列转换为数字列</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">excelchar2d</span><span class="params">(<span class="built_in">string</span> nChar)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> charSum=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> csize=nChar.size();</span><br><span class="line">	<span class="keyword">if</span> (csize&lt;=<span class="number">0</span> || csize&gt;=<span class="number">4</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"输入错误：字母个数为1-3"</span>&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nChar.size();i++)</span><br><span class="line">		&#123;</span><br><span class="line">			charSum+=(nChar[csize-i-<span class="number">1</span>]-<span class="number">64</span>)*<span class="built_in">pow</span>(<span class="number">26</span>,i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;charSum&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> charSum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<the rest="" of="" contents="" |="" 余下全文=""><br>任务中需要将字符串中的阿拉伯数字转换为汉字的大写，譬如使用TTS进行语音播报的时候会将手机号码1388888888读成<strong>数量</strong>而我们所需要播报成：幺三八八八八。。。为<strong>单独对每个数字进行播报</strong>。<br>因此我们考虑将数字转为汉字再进行播报，由于阿拉伯数字0-9数字较少，我们可以采用switch分支的方式来完成，当然为了对应题目中的map使用方式，我们使用以下方法来解决这个问题，以手中正在看的《笑傲江湖1》为例，代码如下：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span> //map头文件的包含</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> nolveName=<span class="string">"笑傲江湖1"</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;nolveName&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">string</span> arabNum=<span class="string">"0123456789"</span>;<span class="comment">//阿拉伯数字字符转</span></span><br><span class="line">	<span class="comment">//定义一个map同时进行相应的转换</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">map</span>&lt;<span class="keyword">char</span>,<span class="built_in">string</span>&gt; mapNolveName;</span><br><span class="line">	mapNolveName[<span class="string">'0'</span>]=<span class="built_in">string</span>(<span class="string">"零"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'1'</span>]=<span class="built_in">string</span>(<span class="string">"一"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'2'</span>]=<span class="built_in">string</span>(<span class="string">"二"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'3'</span>]=<span class="built_in">string</span>(<span class="string">"三"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'4'</span>]=<span class="built_in">string</span>(<span class="string">"四"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'5'</span>]=<span class="built_in">string</span>(<span class="string">"五"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'6'</span>]=<span class="built_in">string</span>(<span class="string">"六"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'7'</span>]=<span class="built_in">string</span>(<span class="string">"七"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'8'</span>]=<span class="built_in">string</span>(<span class="string">"八"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'9'</span>]=<span class="built_in">string</span>(<span class="string">"九"</span>);</span><br><span class="line">	<span class="comment">//对变量进行遍历，并进行相应的替换</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nolveName.length();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">string</span>::npos!=arabNum.find(nolveName[i]))</span><br><span class="line">		&#123;</span><br><span class="line">			nolveName.replace(i,<span class="number">1</span>,mapNolveName[nolveName[i]]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"转换之后为："</span>&lt;&lt;nolveName&lt;&lt;endl;</span><br><span class="line">	getchar();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </the></li>
 </ul>
-<p>程序的运行结果如下图所示：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/%E4%BD%8D%E8%BF%90%E7%AE%97%E4%BD%8D%E8%BF%90%E7%AE%97%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.jpg" alt=""></p>
+<p>运行结果如下图：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/map%E8%BD%AC%E6%8D%A2%E9%98%BF%E6%8B%89%E4%BC%AF%E6%95%B0%E5%AD%97.jpg" alt=""></p>
 
       
     </div>
@@ -248,13 +248,13 @@ var _hmt = _hmt || [];
   
     
 <div class="copyright">
-  <p><span>本文标题:</span><a href="/2015/12/30/位运算学习笔记/">位运算学习笔记</a></p>
+  <p><span>本文标题:</span><a href="/2016/05/04/C-中map的使用方法/">C++中map的使用方法</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 zhuxiangzhi 的个人博客">zhuxiangzhi</a></p>
-  <p><span>发布时间:</span>2015年12月30日 - 17时02分</p>
-  <p><span>最后更新:</span>2015年12月30日 - 17时20分</p>
+  <p><span>发布时间:</span>2016年05月04日 - 23时13分</p>
+  <p><span>最后更新:</span>2016年05月04日 - 23时14分</p>
   <p>
-    <span>原始链接:</span><a class="post-url" href="/2015/12/30/位运算学习笔记/" title="位运算学习笔记">http://zhuxiangzhi.com/2015/12/30/位运算学习笔记/</a>
-    <span class="copy-path" data-clipboard-text="原文: http://zhuxiangzhi.com/2015/12/30/位运算学习笔记/　　作者: zhuxiangzhi" title="点击复制文章链接">
+    <span>原始链接:</span><a class="post-url" href="/2016/05/04/C-中map的使用方法/" title="C++中map的使用方法">http://zhuxiangzhi.com/2016/05/04/C-中map的使用方法/</a>
+    <span class="copy-path" data-clipboard-text="原文: http://zhuxiangzhi.com/2016/05/04/C-中map的使用方法/　　作者: zhuxiangzhi" title="点击复制文章链接">
         <i class="fa fa-clipboard"></i>
     </span>
   </p>
@@ -268,16 +268,10 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <div id="article-nav-newer" class="article-nav-title">
-      <a href="/2016/01/02/感谢你，赠我空欢喜/">
-        Thank you for well noting
-      </a>
-    </div>
-  
   
     <div id="article-nav-older" class="article-nav-title">
-      <a href="/2015/12/25/快速排序算法和冒泡排序算法学习笔记/">
-        快速排序算法和冒泡排序算法学习笔记
+      <a href="/2016/04/24/新火试新茶/">
+        新火试新茶
       </a>
     </div>
   
@@ -343,7 +337,7 @@ var _hmt = _hmt || [];
 
   <div class="duoshuo" id="comments">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015/12/30/位运算学习笔记/" data-title="位运算学习笔记" data-url="http://zhuxiangzhi.com/2015/12/30/位运算学习笔记/"></div>
+	<div class="ds-thread" data-thread-key="2016/05/04/C-中map的使用方法/" data-title="C++中map的使用方法" data-url="http://zhuxiangzhi.com/2016/05/04/C-中map的使用方法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -379,16 +373,14 @@ var _hmt = _hmt || [];
 
   
   
-    
     <div  class="post-nav-button">
-    <a href="/2016/01/02/感谢你，赠我空欢喜/" title="上一篇: Thank you for well noting">
-    <i class="fa fa-angle-left"></i>
-    </a>
-    <a href="/2015/12/25/快速排序算法和冒泡排序算法学习笔记/" title="下一篇: 快速排序算法和冒泡排序算法学习笔记">
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    <a href="/2016/04/24/新火试新茶/" title="下一篇: 新火试新茶">
     <i class="fa fa-angle-right"></i>
     </a>
     </div>
   
+    
 
 
 

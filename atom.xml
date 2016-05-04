@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随笔]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhuxiangzhi.com/"/>
-  <updated>2016-04-24T13:18:30.131Z</updated>
+  <updated>2016-05-04T15:14:26.636Z</updated>
   <id>http://zhuxiangzhi.com/</id>
   
   <author>
@@ -13,6 +13,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[C++中map的使用方法]]></title>
+    <link href="http://zhuxiangzhi.com/2016/05/04/C-%E4%B8%ADmap%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>http://zhuxiangzhi.com/2016/05/04/C-中map的使用方法/</id>
+    <published>2016-05-04T15:13:09.000Z</published>
+    <updated>2016-05-04T15:14:26.636Z</updated>
+    <content type="html"><![CDATA[<p><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文=""><br>任务中需要将字符串中的阿拉伯数字转换为汉字的大写，譬如使用TTS进行语音播报的时候会将手机号码1388888888读成<strong>数量</strong>而我们所需要播报成：幺三八八八八。。。为<strong>单独对每个数字进行播报</strong>。<br>因此我们考虑将数字转为汉字再进行播报，由于阿拉伯数字0-9数字较少，我们可以采用switch分支的方式来完成，当然为了对应题目中的map使用方式，我们使用以下方法来解决这个问题，以手中正在看的《笑傲江湖1》为例，代码如下：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span> //map头文件的包含</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> nolveName=<span class="string">"笑傲江湖1"</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;nolveName&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">string</span> arabNum=<span class="string">"0123456789"</span>;<span class="comment">//阿拉伯数字字符转</span></span><br><span class="line">	<span class="comment">//定义一个map同时进行相应的转换</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">map</span>&lt;<span class="keyword">char</span>,<span class="built_in">string</span>&gt; mapNolveName;</span><br><span class="line">	mapNolveName[<span class="string">'0'</span>]=<span class="built_in">string</span>(<span class="string">"零"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'1'</span>]=<span class="built_in">string</span>(<span class="string">"一"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'2'</span>]=<span class="built_in">string</span>(<span class="string">"二"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'3'</span>]=<span class="built_in">string</span>(<span class="string">"三"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'4'</span>]=<span class="built_in">string</span>(<span class="string">"四"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'5'</span>]=<span class="built_in">string</span>(<span class="string">"五"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'6'</span>]=<span class="built_in">string</span>(<span class="string">"六"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'7'</span>]=<span class="built_in">string</span>(<span class="string">"七"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'8'</span>]=<span class="built_in">string</span>(<span class="string">"八"</span>);</span><br><span class="line">	mapNolveName[<span class="string">'9'</span>]=<span class="built_in">string</span>(<span class="string">"九"</span>);</span><br><span class="line">	<span class="comment">//对变量进行遍历，并进行相应的替换</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nolveName.length();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">string</span>::npos!=arabNum.find(nolveName[i]))</span><br><span class="line">		&#123;</span><br><span class="line">			nolveName.replace(i,<span class="number">1</span>,mapNolveName[nolveName[i]]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"转换之后为："</span>&lt;&lt;nolveName&lt;&lt;endl;</span><br><span class="line">	getchar();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</the></li>
+</ul>
+<p>运行结果如下图：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/map%E8%BD%AC%E6%8D%A2%E9%98%BF%E6%8B%89%E4%BC%AF%E6%95%B0%E5%AD%97.jpg" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>技能的储备从点滴开始，多一点记录或许就多一点希望。</strong></p>
+<ul>
+<li>]]>
+    
+    </summary>
+    
+      <category term="C++ map 数字转汉字" scheme="http://zhuxiangzhi.com/tags/C-map-%E6%95%B0%E5%AD%97%E8%BD%AC%E6%B1%89%E5%AD%97/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[新火试新茶]]></title>
@@ -742,51 +767,6 @@
     </summary>
     
       <category term="冬至" scheme="http://zhuxiangzhi.com/tags/%E5%86%AC%E8%87%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[如何评价胡军版天龙八部（四）]]></title>
-    <link href="http://zhuxiangzhi.com/2015/12/19/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%83%A1%E5%86%9B%E7%89%88%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
-    <id>http://zhuxiangzhi.com/2015/12/19/如何评价胡军版天龙八部（四）/</id>
-    <published>2015-12-19T04:53:48.000Z</published>
-    <updated>2015-12-19T05:23:36.144Z</updated>
-    <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br>金庸巨著《天龙八部》是本人最喜欢的一部武侠小说。作为武侠小说的集大成者可谓金老的巅峰之作。而张纪中任制片人、胡军等人主演的03版《天龙八部》也是本人最喜欢的武侠剧甚至最喜欢的电视剧。</excerpt></p>
-<ul>
-<li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><br><strong>接前文内容</strong><br><strong>第十六章 昔时因</strong><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部昔时因2.jpg" alt=""><br>杏子林中，现存于世的当年的当事人齐聚，为了解开萧峰身世，一切都已备好。这张截图在张纪中版《天龙八部》第一集中已经出现，并没有采用智光大师叙述的方式来表现，而在这一集中，智光大师的回忆除了陈述了真相，更增加了一份沉痛的感觉：</the></li>
-</ul>
-<blockquote>
-<p>智光道：“众位，非是我有意卖关子，不肯吐露这契丹文字的意义。倘若壁上文字确是实情，那么带头大哥、汪帮主和我的所作所为，<strong>确是大错特错</strong>，委实地我颜对人。我智光在武林中只是个无名小卒，做错了事，不算什么，但带头大哥和汪帮主是何等的身份地位？何况汪帮主已然逝世，我可不能胡乱损及他二位的声名，请恕我不能明言。”</p>
-</blockquote>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部昔时因3.jpg" alt=""><br>众人敬仰的智光大师甘为无名小卒，或许是为了维护带头大哥和汪剑通的声誉，也或许是为了降低萧峰的怒气值。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部昔时因4.jpg" alt=""><br>萧峰听到智光大师关于乔三槐夫妇收养自己后的惊愕表情，以及背后钟丽缇饰演的康敏的表情。</p>
-<blockquote>
-<p>乔峰听到这里，心中已猜到了八九分，颤声问道：“智光大师，那……那少室山下的农人，他，他，他姓什么？”<br>智光道：“你既已猜到，我也不必隐瞒。那农人姓乔，名字叫作三槐。”<br>乔峰大声叫道：“不，不！你胡说八道，捏造这么一篇鬼话来诬陷我。我是堂堂汉人，如何是契丹胡虏？我……我……三槐公是我亲生的爹爹，你再瞎说……”突然间双臂一分，抢到智光身前，左手一把抓住了他胸口。</p>
-</blockquote>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部昔时因1.jpg" alt=""><br>萧峰至此也不相信，中原群豪为什么要“诬陷”他非我族类，也不敢相信。回想自己一生总是能逢凶化吉，平坦一生到丐帮帮主之位，然而却不愿做契丹“狗”，此时赵钱孙的几句胡说出来：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部昔时因5.jpg" alt=""><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部昔时因6.jpg" alt=""><br>此间，阿朱帮萧峰（慕容复）辩解，致康敏无言以对，萧峰应该是对阿朱心生好感的吧。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部昔时因8.jpg" alt=""><br>在电视剧的这一集中，高度还原了原著中对昔时产生的误解而致的杀戮，清晰明了的进行了相关对话，各路英豪集结于此，有惊心动魄也有一见倾心。萧峰的怒气值并未达到最高，弃帮主之位和打狗棒而去。<br>还有，儿时的萧峰是不是很像胡皓康：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部昔时因7.jpg" alt=""></p>
-<p><strong>第十七章 今日意</strong><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部今日意1.jpg" alt=""><br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军胡军天龙八部今日意2.jpg" alt=""><br>不可否认答主喜欢张纪中版《天龙八部》有很大一部分因素是因为阿朱的扮演者刘涛，然而当初刘涛并未像如今的大红大紫，当然下巴也没有现如今的那么尖。从当时的年龄来看，刘涛是不适合饰演十七八岁的阿朱的，但阿朱的那份聪慧却完美的表现出来了。或许少了点古灵精怪，但答主觉得张纪中组选角的巅峰水平也在这部《天龙八部》中表现了出来。<br>萧峰帮阿朱阿碧解毒这段，是在原著中下一章节《胡汉恩仇，须倾英雄泪》中通过和段誉王语嫣二人相遇之后阿朱口述出来的，更显小女儿情。<br>萧峰身世解开，愤然离去，西夏赫连铁树等人以悲酥清风迷倒众人，唯独段誉因吞食莽牯朱蛤而躲过这一劫，也多了和王语嫣单独相处的时间，二人去寻找避雨的空间，可谁曾想：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军胡军天龙八部今日意3.jpg" alt=""></p>
-<blockquote>
-<p>忽听得屋角稻草堆中两人齐叫：“啊哟！”站起两个人来，一男一女，都是十八！九岁的农家青年。两人衣衫不整，头发上沾满了稻草，脸上红红的，神色十分尴尬忸怩。原来两人是一对爱侣，那农女在此照料碾米，那小伙子便来跟她亲热，大雨中料得无人到来，当真是肆无忌惮，连段誉和王语嫣在外边说了半天话也没听见。<br>段誉抱拳道：“吵拢，吵拢！我们只是来躲躲雨。两位有什么贵干，尽管请便，不用理睬我们。”<br>王语嫣心道：“这书喳子又来胡说八道了。他二人当着咱们，怎样亲热？”这两句话却不敢说出口来。她乍然见到那一男一女的神态，早就飞走了脸，不敢多看。</p>
-</blockquote>
-<p><strong>你们有事，请继续。。。。请继续。。。。继续你妹啊段誉，请继续。。。。。</strong><br>苦了金二哥了，最后还无端端的送了自己和妹子的命，段誉王语嫣二人，哎，这就是炮灰的命。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部今日意4.jpg" alt=""><br>王语嫣对萧峰和慕容复武功的评价惹怒了假扮西夏武士的慕容复。从这段来看，或许慕容复以前只做着皇帝梦可能会冷落了王语嫣，但在这一集之后，应该会对王语嫣的看法有所改变，二人之间的间隙或许也因此产生。</p>
-<p><strong>第十八 章胡汉恩仇，须倾英雄泪</strong><br>阿朱、段誉乔装成萧峰和慕容复去天宁寺救丐帮众人，其中有个小细节，在阿朱帮段誉化妆完毕之后，王语嫣看段誉（慕容复）的深情：</p>
-<blockquote>
-<p>王语嫣不答，只是痴痴的瞧着他，目光中脉脉含情，显然是心摇神驰，芳心如醉。<br>段誉和她这般如痴如醉的目光一触，心中不禁一荡，随即想起：“她这时瞧的可是慕容复，并不是我段誉。”又想：“那慕容复又不知是如何英俊，如何胜我百倍，可惜我瞧不见自己。”心中一会儿欢喜，一会儿着恼。</p>
-</blockquote>
-<p>如此，以悲酥清风之道，还施西夏人之身，可能降低了丐帮众人对萧峰抵触的阈值，但谁曾想还是有全冠清这个人掺和。在原著中，段誉屡屡遇险，岳老三这个徒弟总会适时的出现帮段誉解围，堪称“好徒儿”。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部胡汉恩仇1.jpg" alt=""><br>另一条线，萧峰回家看乔三槐夫妇，可乔三槐夫妇却已遭杀害。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部胡汉恩仇2.jpg" alt=""><br>少林和尚不问青红皂白训斥萧峰一顿，萧峰不想误会越来越深，也不想徒增杀孽，就带养父、养母尸首埋葬之后去找授业恩师玄苦大师，却不知总有人先他一步。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部胡汉恩仇3.jpg" alt=""><br>假扮萧峰，重伤玄苦，且玄苦到死都以为伤了自己的人是自己亲手调教出来的好徒儿–萧峰。<br>玄苦可谓大慈悲之人，其对佛言七苦的理解是要高于玄慈大师的，玄苦讲到只能渡己，不能度人，可他却不知萧峰的到来，或许对他是一个更大的“苦”</p>
-<blockquote>
-<p>玄苦大师本来脸露微笑，油灯照映下见到乔峰的脸，突然间脸色大变、站起身来，颤声道：“你……你……原来便是你，你便是乔峰，我……我亲手调教出来的好徒儿？”但见他脸上又是惊骇、又是痛苦、又混和着深深的怜悯和惋惜之意。<br>乔峰见师父瞬息间神情大异，心中惊讶之极，说道：“师父，孩儿便是乔峰。”<br><strong>玄苦大师道：“好，好，好！”连说三个“好”字，便不说话了。</strong></p>
-</blockquote>
-<p><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部胡汉恩仇4.jpg" alt=""><br>此刻，萧峰已知“那人”的目的。在少林“巧遇”偷经书的阿朱，并救出受伤的阿朱。互生情愫应该是从此开始。<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部胡汉恩仇6.jpg" alt=""><br>阿朱让萧峰给她唱曲，萧峰言我一个粗鲁汉子怎么会唱曲子，迫不得已萧峰给阿朱讲了个故事，一个小时候不愿受委屈而杀人的自己，从杏子林中萧峰就一直在被误解，他心中委屈，有了阿朱的理解，心理或许会舒畅一些：<br><img src="http://7xp2mn.com1.z0.glb.clouddn.com/胡军天龙八部胡汉恩仇7.jpg" alt=""><br><strong>接下来会是全书的另一个小高潮，未完待续。</strong></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><Excerpt in index | 首页摘要><br>金庸巨著《天龙八部》是本人最喜欢的一部武侠小说。作为武侠小说的集大成者可谓金老的巅峰之作。而张纪中任制片人、胡军等人主演的03版《天龙八部》也是本人最喜欢的武侠剧甚至最喜欢的电视剧。</p>
-<ul>
-<li>]]>
-    
-    </summary>
-    
-      <category term="胡军 天龙八部 刘涛 张纪中" scheme="http://zhuxiangzhi.com/tags/%E8%83%A1%E5%86%9B-%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8-%E5%88%98%E6%B6%9B-%E5%BC%A0%E7%BA%AA%E4%B8%AD/"/>
     
   </entry>
   
